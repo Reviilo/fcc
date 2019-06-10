@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Excercices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+  </head>
+  <body>
+
+    <nav id="navbar">
+      <header>
+        Excercices
+      </header>
+      <ul>
+        <li class="container-nav-li"><a class="nav-link" href="#Introdution" rel="internal">Introdution</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Verify-an-Object-s-Constructor-with-instanceof" rel="internal">Verify an Object's Constructor with instanceof</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Understand-Own-Properties" rel="internal">Understand Own Properties</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Add-Methods-After-Inheritance" rel="internal">Add Methods After Inheritance</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Use-Closure-to-Protect-Properties-Within-an-Object-from-Being-Modified-Externally" rel="internal">Use Closure to Protect Properties Within an Object from Being Modified Externally</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Use-an-IIFE-to-Create-a-Module" rel="internal">Use an IIFE to Create a Module</a></li>
+      </ul>
+      <div class="nav-mobile"> Menu </div>
+    </nav>
+
+    <main id="main-doc">
+      <!--
+        <p><a href="" target="_blank">reference fcc, click here.</a></p>
+      -->
+
+      <section id="Introdution" class="main-section">
+        <header>Introdution</header>
+        <article>
+          <p>
+            Esta es una documentacion de los ejercicios que mas me llamaron la atencion en FCC.
+          </p>
+        </article>
+      </section>
+
+      <section id="Verify-an-Object-s-Constructor-with-instanceof" class="main-section">
+        <header>Verify an Object's Constructor with instanceof</header>
+        <article>
+          <p class="wrappable">Create a new instance of the <code>House</code> constructor, calling it <code>myHouse</code> and passing a number of bedrooms. Then, use <code>instanceof</code> to verify that it is an instance of <code>House</code>.</p>
+          <blockquote>
+            /* jshint expr: true */ <br> <br>
+
+            function House(numBedrooms) { <br>&nbsp;&nbsp;
+              this.numBedrooms = numBedrooms; <br>
+            } <br> <br>
+
+            // Add your code below this line <br> <br>
+
+            let myHouse = new House(25); <br>
+            myHouse instanceof House;
+          </blockquote>
+          <p><a href="file:///Users/oramirez/Documents/proyectos/revi/fcc/js/object-oriented-programming/documentation/index.html" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Understand-Own-Properties" class="main-section">
+        <header>Understand Own Properties</header>
+        <article>
+          <p class="wrappable">Add the <code>own</code> properties of <code>canary</code> to the array <code>ownProps</code>.</p>
+          <blockquote>
+            function Bird(name) { <br>&nbsp;&nbsp;
+              this.name = name; <br>&nbsp;&nbsp;
+              this.numLegs = 2; <br>
+            } <br> <br>
+
+            let canary = new Bird("Tweety"); <br>
+            let ownProps = []; <br>
+            // Add your code below this line <br> <br>
+
+            for (let property in canary) { <br>&nbsp;&nbsp;
+              if (canary.hasOwnProperty(property)) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                ownProps.push(property); <br>&nbsp;&nbsp;
+              } <br>
+            } <br> <br>
+
+            console.log(ownProps); // (2) ["name", "numLegs"]
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/object-oriented-programming/understand-own-properties" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Add-Methods-After-Inheritance" class="main-section">
+        <header>Add Methods After Inheritance</header>
+        <article>
+          <p class="wrappable">Add all necessary code so the <code>Dog</code> object inherits from <code>Animal</code> and the <code>Dog's</code> <code>prototype</code> constructor is set to Dog. Then add a <code>bark()</code> method to the <code>Dog</code> object so that <code>beagle</code> can both <code>eat()</code> and <code>bark()</code>. The <code>bark()</code> method should print "Woof!" to the console.</p>
+          <blockquote>
+            function Animal() { } <br>
+            Animal.prototype.eat = function() { console.log("nom nom nom"); }; <br> <br>
+
+            function Dog() { } <br> <br>
+
+            // Add your code below this line <br> <br>
+
+            Dog.prototype = Object.create(Animal.prototype); <br>
+            Dog.prototype.constructor = Dog; <br>
+            Dog.prototype.bark = function () { console.log("Woof!"); }; <br> <br>
+
+            // Add your code above this line <br> <br>
+
+            let beagle = new Dog(); <br> <br>
+
+            beagle.eat(); // Should print "nom nom nom" <br>
+            beagle.bark(); // Should print "Woof!"
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/object-oriented-programming/add-methods-after-inheritance" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Use-Closure-to-Protect-Properties-Within-an-Object-from-Being-Modified-Externally" class="main-section">
+        <header>Use Closure to Protect Properties Within an Object from Being Modified Externally</header>
+        <article>
+          <p class="wrappable">Change how <code>weight</code> is declared in the <code>Bird</code> function so it is a private variable. Then, create a method <code>getWeight</code> that returns the value of <code>weight</code>.</p>
+          <blockquote>
+            function Bird() { <br><br>&nbsp;&nbsp;
+              let weight = 15; <br><br>&nbsp;&nbsp;
+
+              this.getWeight = function () { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                return weight; <br>&nbsp;&nbsp;
+              } <br>
+            }
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/object-oriented-programming/use-closure-to-protect-properties-within-an-object-from-being-modified-externally" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Use-an-IIFE-to-Create-a-Module" class="main-section">
+        <header>Use an IIFE to Create a Module</header>
+        <article>
+          <p class="wrappable">Create a <code>module</code> named <code>funModule</code> to wrap the two <code>mixins</code> <code>isCuteMixin</code> and <code>singMixin</code>. <code>funModule</code> should return an object.</p>
+          <blockquote>
+            let funModule = (function () { <br>&nbsp;&nbsp;
+              return { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                isCuteMixin: function(obj) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  obj.isCute = function() { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    return true; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  }; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                }, <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                singMixin: function(obj) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  obj.sing = function() { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    console.log("Singing to an awesome tune"); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  }; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                } <br>&nbsp;&nbsp;
+              } <br>
+            })(); <br>
+          </blockquote>
+          <p><a href="" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+    </main>
+    <script type="text/javascript" src="../js/scripts.js"></script>
+  </body>
+</html>

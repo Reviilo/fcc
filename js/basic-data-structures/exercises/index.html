@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Excercices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+  </head>
+  <body>
+
+    <nav id="navbar">
+      <header>
+        Excercices
+      </header>
+      <ul>
+        <li class="container-nav-li"><a class="nav-link" href="#Introdution" rel="internal">Introdution</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Copy-Array-Items-Using-slice" rel="internal">Copy Array Items Using slice()</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Check-For-The-Presence-of-an-Element-With-indexOf" rel="internal">Check For The Presence of an Element With indexOf()</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Iterate-Through-All-an-Array's-Items-Using-For-Loops" rel="internal">Iterate Through All an Array's Items Using For Loops</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Add-Key-Value-Pairs-to-JavaScript-Objects" rel="internal">Add Key-Value Pairs to JavaScript Objects</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Check-if-an-Object-has-a-Property" rel="internal">Check if an Object has a Property</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Iterate-Through-the-Keys-of-an-Object-with-a-for-in-Statement" rel="internal">Iterate Through the Keys of an Object with a for...in Statement</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Generate-an-Array-of-All-Object-Keys-with-Object-keys" rel="internal">Generate an Array of All Object Keys with Object.keys()</a></li>
+      </ul>
+      <div class="nav-mobile"> Menu </div>
+    </nav>
+
+    <main id="main-doc">
+      <!--
+        <p><a href="" target="_blank">reference fcc, click here.</a></p>
+      -->
+
+      <section id="Introdution" class="main-section">
+        <header>Introdution</header>
+        <article>
+          <p>
+            Esta es una documentacion de los ejercicios que mas me llamaron la atencion en FCC.
+          </p>
+        </article>
+      </section>
+
+      <section id="Copy-Array-Items-Using-slice" class="main-section">
+        <header>Copy Array Items Using slice()</header>
+        <article>
+          <p class="wrappable">We have defined a function, <code>copyMachine</code> which takes <code>arr</code> (an array) and <code>num</code> (a number) as arguments. The function is supposed to return a new array made up of <code>num</code> copies of <code>arr</code>. We have done most of the work for you, but it doesn't work quite right yet. Modify the function using spread syntax so that it works correctly (hint: another method we have already covered might come in handy here!).</p>
+          <blockquote>
+            function copyMachine(arr, num) {<br>&nbsp;&nbsp;
+              let newArr = [];<br>&nbsp;&nbsp;
+              while (num >= 1) {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                // change code below this line<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                newArr.push([...arr]);<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                // change code above this line<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                num--;<br>&nbsp;&nbsp;
+              }<br>&nbsp;&nbsp;
+              return newArr;<br>
+            }<br><br>
+
+            // change code here to test different cases:<br>
+            console.log(copyMachine([true, false, true], 2));
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/copy-array-items-using-slice" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Check-For-The-Presence-of-an-Element-With-indexOf" class="main-section">
+        <header>Check For The Presence of an Element With indexOf()</header>
+        <article>
+          <p class="wrappable"><code>indexOf()</code> can be incredibly useful for quickly checking for the presence of an element on an array. We have defined a function, <code>quickCheck</code>, that takes an array and an element as arguments. Modify the
+            function using <code>indexOf()</code> so that it returns <code>true</code> if the passed element exists on the array, and <code>false</code> if it does not.</p>
+          <blockquote>
+            function quickCheck(arr, elem) {<br>&nbsp;&nbsp;
+              // change code below this line<br>&nbsp;&nbsp;
+              return arr.indexOf(elem) != -1 ? true : false;<br>&nbsp;&nbsp;
+              // change code above this line<br>
+            }<br><br>
+
+            // change code here to test different cases:<br>
+            console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/check-for-the-presence-of-an-element-with-indexof" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="" class="main-section">
+        <header>Iterate Through All an Array's Items Using For Loops</header>
+        <article>
+          <p class="wrappable">We have defined a function, <code>filteredArray</code>, which takes <code>arr</code>, a nested array, and <code>elem</code> as arguments, and returns a new array. <code>elem</code> represents an element that may or may not be present on one or more of the arrays nested within <code>arr</code>. Modify the function, using a <code>for</code> loop, to return a filtered version of the passed array such that any array nested within <code>arr</code> containing <code>elem</code> has been removed.</p>
+          <blockquote>
+            function filteredArray(arr, elem) { <br>&nbsp;&nbsp;
+              let newArr = []; <br>&nbsp;&nbsp;
+              // change code below this line <br>&nbsp;&nbsp;
+              for(let i=0; i < arr.length; i++) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                if (arr[i].indexOf(elem) == -1) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  newArr.push(arr[i]); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                } <br>&nbsp;&nbsp;
+              } <br>&nbsp;&nbsp;
+              // change code above this line <br>&nbsp;&nbsp;
+              return newArr; <br>&nbsp;&nbsp;
+            } <br><br>
+
+            // change code here to test different cases: <br>
+            console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3)); <br>
+            console.log(filteredArray([[10, 8, 3], [14, 6, 23], [3, 18, 6]], 18))
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/iterate-through-all-an-arrays-items-using-for-loops" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Add-Key-Value-Pairs-to-JavaScript-Objects" class="main-section">
+        <header>Add Key-Value Pairs to JavaScript Objects</header>
+        <article>
+          <p class="wrappable">We've defined a function, <code>checkInventory</code>, which receives a scanned item as an argument. Return the current value of the <code>scannedItem</code> key in the <code>foods</code> object. You can assume that only valid keys will be provided as an argument to <code>checkInventory</code>.</p>
+          <blockquote>
+            let foods = { <br>&nbsp;&nbsp;
+              apples: 25, <br>&nbsp;&nbsp;
+              oranges: 32, <br>&nbsp;&nbsp;
+              plums: 28, <br>&nbsp;&nbsp;
+              bananas: 13, <br>&nbsp;&nbsp;
+              grapes: 35, <br>&nbsp;&nbsp;
+              strawberries: 27 <br>
+            }; <br><br>
+
+            // do not change code above this line <br>
+            function checkInventory(scannedItem) { <br>&nbsp;&nbsp;
+              // change code below this line <br>&nbsp;&nbsp;
+              return foods[scannedItem] ? foods[scannedItem] : 'nothing';<br>
+            }<br><br>
+
+            // change code below this line to test different cases:<br>
+            console.log(checkInventory("apples"));
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/access-property-names-with-bracket-notation" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Check-if-an-Object-has-a-Property" class="main-section">
+        <header>Check if an Object has a Property</header>
+        <article>
+          <p class="wrappable">We've created an object, <code>users</code>, with some users in it and a function <code>isEveryoneHere</code>, which we pass the <code>users</code> object to as an argument. Finish writing this function so that it returns <code>true</code> only if the <code>users</code> object contains all four names, <code>Alan</code>, <code>Jeff</code>, <code>Sarah</code>, and <code>Ryan</code>, as keys, and <code>false</code> otherwise.</p>
+          <blockquote>
+            let users = { <br>&nbsp;&nbsp;
+              Alan: { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                age: 27, <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                online: true <br>&nbsp;&nbsp;
+              }, <br>&nbsp;&nbsp;
+              Jeff: { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                age: 32, <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                online: true <br>&nbsp;&nbsp;
+              }, <br>&nbsp;&nbsp;
+              Sarah: { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                age: 48, <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                online: true <br>&nbsp;&nbsp;
+              }, <br>&nbsp;&nbsp;
+              Ryan: { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                age: 19, <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                online: true <br>&nbsp;&nbsp;
+              } <br>
+            }; <br><br>
+
+            function isEveryoneHere(obj) { <br>&nbsp;&nbsp;
+              // change code below this line <br>&nbsp;&nbsp;
+              return obj.hasOwnProperty('Alan', 'Jeff', 'Sarah', 'Ryan'); <br>&nbsp;&nbsp;
+              // change code above this line <br>
+            } <br><br>
+
+            console.log(isEveryoneHere(users)); // true
+
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/check-if-an-object-has-a-property" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Iterate-Through-the-Keys-of-an-Object-with-a-for-in-Statement" class="main-section">
+        <header>Iterate Through the Keys of an Object with a for...in Statement</header>
+        <article>
+          <p class="wrappable">We've defined a function, <code>countOnline</code>; use a <dfn>for...in</dfn> statement within this function to loop through the users in the <code>users</code> object and return the number of users whose <code>online</code> property is set to <code>true</code>.</p>
+          <blockquote>
+            let users = { <br>&nbsp;&nbsp;
+              Alan: { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                age: 27, <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                online: false <br>&nbsp;&nbsp;
+              }, <br>&nbsp;&nbsp;
+              Jeff: { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                age: 32, <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                online: true <br>&nbsp;&nbsp;
+              }, <br>&nbsp;&nbsp;
+              Sarah: { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                age: 48, <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                online: false <br>&nbsp;&nbsp;
+              }, <br>&nbsp;&nbsp;
+              Ryan: { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                age: 19, <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                online: true <br>&nbsp;&nbsp;
+              } <br>
+            }; <br><br>
+
+            function countOnline(obj) { <br>&nbsp;&nbsp;
+              // change code below this line <br>&nbsp;&nbsp;
+              let r = 0; <br>&nbsp;&nbsp;
+              for (let user in obj) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                if (obj[user].online) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  r++; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                } <br>&nbsp;&nbsp;
+              } <br>&nbsp;&nbsp;
+              return r;  <br>&nbsp;&nbsp;
+              // change code above this line <br>
+            } <br> <br>
+
+            console.log(countOnline(users));
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/-iterate-through-the-keys-of-an-object-with-a-for---in-statement" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Generate-an-Array-of-All-Object-Keys-with-Object-keys" class="main-section">
+        <header>Generate an Array of All Object Keys with Object.keys()</header>
+        <article>
+          <div class="challenge-instructions basic-data-structures col-xs-12">
+            <p class="wrappable">We can also generate an array which contains all the keys stored in an object using the <code>Object.keys()</code> method and passing in an object as the argument. This will return an array with strings representing each
+              property in the object. Again, there will be no specific order to the entries in the array.</p>
+            <p class="wrappable">
+              <hr>
+            </p>
+            <p class="wrappable">Finish writing the <code>getArrayOfUsers</code> function so that it returns an array containing all the properties in the object it receives as an argument.</p>
+            <blockquote>
+              let users = { <br>&nbsp;&nbsp;
+                Alan: { age: 27, online: false }, <br>&nbsp;&nbsp;
+                Jeff: { age: 32, online: true }, <br>&nbsp;&nbsp;
+                Sarah: { age: 48, online: false }, <br>&nbsp;&nbsp;
+                Ryan: { age: 19, online: true } <br>
+              }; <br><br>
+
+              function getArrayOfUsers(obj) { <br>&nbsp;&nbsp;
+                // change code below this line <br>&nbsp;&nbsp;
+                return Object.keys(obj); <br>&nbsp;&nbsp;
+                // change code above this line <br>
+              } <br><br>
+
+              console.log(getArrayOfUsers(users)); // (4) ["Alan", "Jeff", "Sarah", "Ryan"]
+            </blockquote>
+            <p><a href="" target="_blank">reference fcc, click here.</a></p>
+          </div>
+        </article>
+      </section>
+
+    </main>
+    <script type="text/javascript" src="../js/scripts.js"></script>
+  </body>
+</html>

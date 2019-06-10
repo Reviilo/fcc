@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  text-align: center;
+  min-width: 300px;
+  color: #333;
+  background: #eee;
+}
+
+#main {
+  margin: 0 auto;
+  border: 0px solid;
+  border-radius: 5px;
+  max-width: 900px;
+}
+
+#title {
+  padding: 15px 0;
+}
+
+img {
+  max-width: 30%;
+  display: block;
+  height: auto;
+  margin: auto;
+}
+@media screen and (max-width: 500px) {
+  img {
+    max-width: 50%;
+  }
+}
+
+#img-div {
+  margin-top: 20px;
+  width: 100%;
+  border: 10px solid #fff;
+  background: #fff;
+}
+
+#img-caption {
+  margin: 15px;
+}
+
+#tribute-info {
+  padding: 50px 30px;
+}
+
+#headline {
+  text-align: left;
+}
+
+ul {
+  max-width: 550px;
+  margin: 0 auto 50px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+li {
+  margin: 10px;
+}
+
+blockquote {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+blockquote p:first-child {
+  margin-bottom: 15px;
+}

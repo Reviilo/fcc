@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JS Ejercicios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+  </head>
+  <body>
+
+    <nav id="navbar">
+      <header>
+        JS Ejercicios
+      </header>
+      <ul>
+        <li class="container-nav-li"><a class="nav-link" href="#Introdution" rel="internal">Introdution</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Stand-in-Line" rel="internal">Stand in Line</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Golf-Code" rel="internal">Golf Code</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Counting-Cards" rel="internal">Counting Cards</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Record-Collection" rel="internal">Record Collection</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Profile-Lookup" rel="internal">Profile Lookup</a></li>
+      </ul>
+      <div class="nav-mobile"> Menu </div>
+    </nav>
+
+    <main id="main-doc">
+      <!--
+        <p><a href="" target="_blank">reference fcc, click here.</a></p>
+      -->
+
+      <section id="Introdution" class="main-section">
+        <header>Introdution</header>
+        <article>
+          <p>
+            Esta es una documentacion de los ejercicios que mas me llamaron la atencion de Basic JS em FCC.
+          </p>
+        </article>
+      </section>
+
+      <section id="Stand-in-Line" class="main-section">
+        <header>Stand in Line</header>
+        <article>
+          <div class="challenge-instructions basic-javascript col-xs-12">
+            <p class="wrappable">In Computer Science a <dfn>queue</dfn> is an abstract <dfn>Data Structure</dfn> where items are kept in order. New items can be added at the back of the <code>queue</code> and old items are taken off from the front of the <code>queue</code>.</p>
+            <p class="wrappable">Write a function <code>nextInLine</code> which takes an array (<code>arr</code>) and a number (<code>item</code>) as arguments.</p>
+            <p class="wrappable">Add the number to the end of the array, then remove the first element of the array.</p>
+            <p class="wrappable">The <code>nextInLine</code> function should then return the element that was removed.</p>
+            <blockquote>
+              function nextInLine (arr, item) {<br>&nbsp;&nbsp;
+                arr.push(item);<br>&nbsp;&nbsp;
+                return arr.shift();<br>
+              }<br><br>
+
+              // Test Setup<br>
+              var testArr = [1,2,3,4,5];<br><br>
+
+              // Display Code<br>
+              console.log("Before: " + JSON.stringify(testArr));<br>
+              console.log(nextInLine(testArr, 6)); // Modify this line to test<br>
+              console.log("After: " + JSON.stringify(testArr));<br><br>
+
+
+
+              // running tests<br>
+              Before: [1,2,3,4,5]<br>
+              1<br>
+              After: [2,3,4,5,6]<br>
+              // tests completed
+            </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/stand-in-line" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Golf-Code" class="main-section">
+        <header>Golf Code</header>
+        <article>
+
+            <p class="wrappable">In the game of <a href="https://en.wikipedia.org/wiki/Golf" target="_blank">golf</a> each hole has a <code>par</code> meaning the average number of <code>strokes</code> a golfer is expected to make in order to sink the ball in a hole to complete the play. Depending on how far above or below <code>par</code> your <code>strokes</code> are, there is a different nickname.</p>
+            <p class="wrappable">Your function will be passed <code>par</code> and <code>strokes</code> arguments. Return the correct string according to this table which lists the strokes in order of priority; top (highest) to bottom (lowest):</p>
+            <div>
+              <table class="table table-striped">
+                <thead>
+                  <tr><th>Strokes</th><th>Return</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td>"Hole-in-one!"</td></tr>
+                  <tr><td>&lt;= par - 2</td><td>"Eagle"</td>
+                  </tr><tr><td>par - 1</td><td>"Birdie"</td></tr>
+                  <tr><td>par</td><td>"Par"</td></tr>
+                  <tr><td>par + 1</td><td>"Bogey"</td></tr>
+                  <tr><td>par + 2</td><td>"Double Bogey"</td></tr>
+                  <tr><td>&gt;= par + 3</td><td>"Go Home!"</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="wrappable"><code>par</code> and <code>strokes</code> will always be numeric and positive. We have added an array of all the names for your convenience.</p>
+            <blockquote>
+              var names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];<br>
+              function golfScore(par, strokes) {<br>&nbsp;&nbsp;
+                // Only change code below this line<br>&nbsp;&nbsp;
+                if (strokes == 1) {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                  return "Hole-in-one!";<br>&nbsp;&nbsp;
+                } else if (strokes <= par - 2 ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                  return "Eagle";<br>&nbsp;&nbsp;
+                } else if (strokes == par - 1) {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                  return "Birdie";<br>&nbsp;&nbsp;
+                } else if (strokes == par) {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                  return "Par";<br>&nbsp;&nbsp;
+                } else if (strokes == par + 1) {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                  return "Bogey";<br>&nbsp;&nbsp;
+                } else if (strokes == par + 2) {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                  return "Double Bogey";<br>&nbsp;&nbsp;
+                } else if (strokes >= par + 3) {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                  return "Go Home!";<br>&nbsp;&nbsp;
+                }<br>
+              }<br><br>
+
+              // Change these values to test<br>
+              golfScore(5, 4);   // "Birdie"
+            </blockquote>
+            <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/golf-code" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Counting-Cards" class="main-section">
+        <header>Counting Cards</header>
+        <article>
+          <p class="wrappable">In the casino game Blackjack, a player can gain an advantage over the house by keeping track of the relative number of high and low cards remaining in the deck. This is called <a href="https://en.wikipedia.org/wiki/Card_counting" target="_blank">Card Counting</a>.</p>
+          <p class="wrappable">Having more high cards remaining in the deck favors the player. Each card is assigned a value according to the table below. When the count is positive, the player should bet high. When the count is zero or negative, the player should bet low.</p>
+          <div><table class="table table-striped"><thead><tr><th>Count Change</th><th>Cards</th></tr></thead><tbody><tr><td>+1</td><td>2, 3, 4, 5, 6</td></tr><tr><td>0</td><td>7, 8, 9</td></tr><tr><td>-1</td><td>10, 'J', 'Q', 'K', 'A'</td></tr></tbody></table></div>
+          <p class="wrappable">You will write a card counting function. It will receive a <code>card</code> parameter, which can be a number or a string, and increment or decrement the global <code>count</code> variable according to the card's value (see table). The function will then return a string with the current count and the string <code>Bet</code> if the count is positive, or <code>Hold</code> if the count is zero or negative. The current count and the player's decision (<code>Bet</code> or <code>Hold</code>) should be separated by a single space.</p>
+          <p class="wrappable"><strong>Example Output</strong><br><code>-3 Hold</code><br><code>5 Bet</code></p>
+          <p class="wrappable"><strong>Hint</strong><br>Do NOT reset <code>count</code> to 0 when value is 7, 8, or 9.<br>Do NOT return an array.<br>Do NOT include quotes (single or double) in the output.</p>
+          <blockquote>
+            var count = 0;<br><br>
+
+            function cc(card) {<br>&nbsp;&nbsp;
+              var answer = '';<br>&nbsp;&nbsp;
+              switch (card) {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                case 2:<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                case 3:<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                case 4:<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                case 5:<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                case 6:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  count += 1;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  break;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                case 7:<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                case 8:<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                case 9:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  count += 0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  break;<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                case 10:<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                case 'J':<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                case 'Q':<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                case 'K':<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                case 'A':<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  count -= 1;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  break;<br>&nbsp;&nbsp;
+              }<br><br>&nbsp;&nbsp;
+
+              if (count > 0) {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                answer = count + ' Bet';<br>&nbsp;&nbsp;
+              } else {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                answer = count + ' Hold';<br>&nbsp;&nbsp;
+              }<br><br>&nbsp;&nbsp;
+
+              return answer;<br>
+            }<br><br>
+
+            // Note: Only the last will display<br>
+            cc(2); cc(3); cc(7); cc('K'); cc('A');   //"0 Hold"
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/counting-cards" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Record-Collection" class="main-section">
+        <header>Record Collection</header>
+        <article>
+          <p class="wrappable">You are given a JSON object representing a part of your musical album collection. Each album has several properties and a unique id number as its key. Not all albums have complete information.</p>
+          <p class="wrappable">Write a function which takes an album's <code>id</code> (like <code>2548</code>), a property <code>prop</code> (like <code>"artist"</code> or <code>"tracks"</code>), and a <code>value</code> (like <code>"Addicted to Love"</code>) to modify the data in this collection.</p>
+          <p class="wrappable">If <code>prop</code> isn't <code>"tracks"</code> and <code>value</code> isn't empty (<code>""</code>), update or set the <code>value</code> for that record album's property.</p>
+          <p class="wrappable">Your function must always return the entire collection object.</p>
+          <p class="wrappable">There are several rules for handling incomplete data:</p><p class="wrappable">If <code>prop</code> is <code>"tracks"</code> but the album doesn't have a <code>"tracks"</code> property, create an empty array before adding the new value to the album's corresponding property.</p>
+          <p class="wrappable">If <code>prop</code> is <code>"tracks"</code> and <code>value</code> isn't empty (<code>""</code>), push the <code>value</code> onto the end of the album's existing <code>tracks</code> array.</p>
+          <p class="wrappable">If <code>value</code> is empty (<code>""</code>), delete the given <code>prop</code> property from the album.</p>
+          <p class="wrappable"><strong>Hints</strong><br>Use <code>bracket notation</code> when <a href="javascript-algorithms-and-data-structures/basic-javascript/accessing-object-properties-with-variables" target="_blank">accessing object properties with variables</a>.</p>
+          <p class="wrappable">Push is an array method you can read about on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push" target="_blank">Mozilla Developer Network</a>.</p>
+          <p class="wrappable">You may refer back to <a href="javascript-algorithms-and-data-structures/basic-javascript/manipulating-complex-objects" target="_blank">Manipulating Complex Objects</a> Introducing JavaScript Object Notation (JSON) for a refresher.</p></div>
+          <blockquote cite="http://">
+            // Setup<br>
+            var collection = {<br>&nbsp;&nbsp;
+                "2548": {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  "album": "Slippery When Wet",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  "artist": "Bon Jovi",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  "tracks": [ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    "Let It Rock",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    "You Give Love a Bad Name" <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  ]<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                },<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                "2468": {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  "album": "1999",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  "artist": "Prince",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  "tracks": [ <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    "1999", <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    "Little Red Corvette" <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  ]<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                },<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                "1245": {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  "artist": "Robert Palmer",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  "tracks": [ ]<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                },<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                "5439": {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  "album": "ABBA Gold"<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                }<br>&nbsp;&nbsp;
+            };<br>
+            // Keep a copy of the collection for tests<br>
+            var collectionCopy = JSON.parse(JSON.stringify(collection));<br><br>
+
+            // Only change code below this line<br>
+            function updateRecords(id, prop, value) {<br><br>&nbsp;&nbsp;
+
+              if (collection.hasOwnProperty(id)) {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                if (value == '') {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  delete collection[id][prop];<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                } else {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  if (prop == 'artist' || prop == 'album') {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    collection[id].artist = value;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  } else if (prop == 'tracks') {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    if (collection[id].hasOwnProperty(prop)) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      collection[id].tracks.push(value);  <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    } else {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      collection[id].tracks = [value];<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    }<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  }<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                }<br>&nbsp;&nbsp;
+              }<br><br>&nbsp;&nbsp;
+
+              return collection;<br>
+            }<br><br>
+
+            // Alter values below to test your code<br>
+            updateRecords(5439, "artist", "ABBA");<br>
+            updateRecords(5439, "tracks", "Take a Chance on Me");<br>
+            updateRecords(1245, "album", "Riptide");<br>
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/record-collection" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Profile-Lookup" class="main-section">
+        <header>Profile Lookup</header>
+        <article>
+          <p class="wrappable">We have an array of objects representing different people in our contacts lists.</p>
+          <p class="wrappable">A <code>lookUpProfile</code> function that takes <code>name</code> and a property (<code>prop</code>) as arguments has been pre-written for you.</p>
+          <p class="wrappable">The function should check if <code>name</code> is an actual contact's <code>firstName</code> and the given property (<code>prop</code>) is a property of that contact.</p>
+          <p class="wrappable">If both are true, then return the "value" of that property.</p>
+          <p class="wrappable">If <code>name</code> does not correspond to any contacts then return <code>"No such contact"</code></p>
+          <p class="wrappable">If <code>prop</code> does not correspond to any valid properties of a contact found to match <code>name</code> then return <code>"No such property"</code></p>
+          <blockquote>
+            //Setup<br>
+            var contacts = [<br>&nbsp;&nbsp;
+                {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    "firstName": "Akira",<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    "lastName": "Laine",<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    "number": "0543236543",<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    "likes": ["Pizza", "Coding", "Brownie Points"]<br>&nbsp;&nbsp;
+                },<br>&nbsp;&nbsp;
+                {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    "firstName": "Harry",<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    "lastName": "Potter",<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    "number": "0994372684",<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    "likes": ["Hogwarts", "Magic", "Hagrid"]<br>&nbsp;&nbsp;
+                },<br>&nbsp;&nbsp;
+                {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    "firstName": "Sherlock",<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    "lastName": "Holmes",<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    "number": "0487345643",<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    "likes": ["Intriguing Cases", "Violin"]<br>&nbsp;&nbsp;
+                },<br>&nbsp;&nbsp;
+                {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    "firstName": "Kristian",<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    "lastName": "Vos",<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    "number": "unknown",<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    "likes": ["JavaScript", "Gaming", "Foxes"]<br>&nbsp;&nbsp;
+                }<br>
+            ];<br><br>
+
+            function lookUpProfile(name, prop){<br>&nbsp;&nbsp;
+            // Only change code below this line<br>&nbsp;&nbsp;
+              var propReturned;<br>&nbsp;&nbsp;
+              for (var i=0;i < contacts.length; i++ ) {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                if (contacts[i].firstName == name) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  if (contacts[i].hasOwnProperty(prop)) {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    return contacts[i][prop];<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  } else {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    return "No such property";<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  }<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                }<br>&nbsp;&nbsp;
+              }<br><br>&nbsp;&nbsp;
+
+              return propReturned = "No such contact";<br>&nbsp;&nbsp;
+            // Only change code above this line<br>
+            }<br><br>
+
+            // Change these values to test your function<br>
+            console.log(lookUpProfile("Akira", "likes"));<br>
+            console.log(lookUpProfile("Kristian", "lastName"));<br>
+            console.log(lookUpProfile("Sherlock", "likes"));<br>
+            console.log(lookUpProfile("Harry", "likes"));<br>
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/profile-lookup" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+    </main>
+    <script type="text/javascript" src="../js/scripts.js"></script>
+
+  </body>
+</html>

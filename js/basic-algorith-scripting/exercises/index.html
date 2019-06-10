@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Excercices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+  </head>
+  <body>
+
+    <nav id="navbar">
+      <header>
+        Excercices
+      </header>
+      <ul>
+        <li class="container-nav-li"><a class="nav-link" href="#Introdution" rel="internal">Introdution</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Convert-Celsius-to-Fahrenheit" rel="internal">Convert Celsius to Fahrenheit</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Reverse-a-String" rel="internal">Reverse a String</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Factorialize-a-Number" rel="internal">Factorialize a Number</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Find-the-Longest-Word-in-a-String" rel="internal">Find the Longest Word in a String</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Return-Largest-Numbers-in-Arrays" rel="internal">Return Largest Numbers in Arrays</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Confirm-the-Ending" rel="internal">Confirm the Ending</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Repeat-a-String-Repeat-a-String" rel="internal">Repeat a String Repeat a String</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Truncate-a-String" rel="internal">Truncate a String</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Finders-Keepers" rel="internal">Finders Keepers</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Boo-who" rel="internal">Boo who</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Title-Case-a-Sentence" rel="internal">Title Case a Sentence</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Slice-and-Splice" rel="internal">Slice and Splice</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Falsy-Bouncer" rel="internal">Falsy Bouncer</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Where-do-I-Belong" rel="internal">Where do I Belong</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Mutations" rel="internal">Mutations</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Chunky-Monkey" rel="internal">Chunky Monkey</a></li>
+      </ul>
+      <div class="nav-mobile"> Menu </div>
+    </nav>
+
+    <main id="main-doc">
+      <!--
+        <p><a href="" target="_blank">reference fcc, click here.</a></p>
+      -->
+
+      <section id="Introdution" class="main-section">
+        <header>Introdution</header>
+        <article>
+          <p>
+            Esta es una documentacion de los ejercicios que mas me llamaron la atencion en FCC.
+          </p>
+        </article>
+      </section>
+
+      <section id="Convert-Celsius-to-Fahrenheit" class="main-section">
+        <header>Convert Celsius to Fahrenheit</header>
+        <article>
+          <div class="challenge-instructions basic-algorithm-scripting col-xs-12">
+            <p class="wrappable">The algorithm to convert from Celsius to Fahrenheit is the temperature in Celsius times <code>9/5</code>, plus <code>32</code>.</p>
+            <p class="wrappable">You are given a variable <code>celsius</code> representing a temperature in Celsius. Use the variable <code>fahrenheit</code> already defined and assign it the Fahrenheit temperature equivalent to the given Celsius temperature.
+              Use the algorithm mentioned above to help convert the Celsius temperature to Fahrenheit.</p>
+            <p class="wrappable">Don't worry too much about the function and return statements as they will be covered in future challenges. For now, only use operators that you have already learned.</p>
+          </div>
+          <blockquote>
+            function convertToF(celsius) { <br>&nbsp;&nbsp;
+              let fahrenheit = (celsius * (9/5)) + 32;<br>&nbsp;&nbsp;
+              return fahrenheit;<br>
+            }<br>
+            console.log(convertToF(30));  // 86
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/convert-celsius-to-fahrenheit" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Reverse-a-String" class="main-section">
+        <header>Reverse a String</header>
+        <article>
+          <div class="challenge-instructions basic-algorithm-scripting col-xs-12">
+            <p class="wrappable">Reverse the provided string.</p>
+            <p class="wrappable">You may need to turn the string into an array before you can reverse it.</p>
+            <p class="wrappable">Your result must be a string.</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Write your own code.</p>
+          </div>
+          <blockquote>
+            function reverseString(str) { <br>&nbsp;&nbsp;
+              // console.log(`str.length: ${str.length - 1}`);<br>&nbsp;&nbsp;
+              let newString = '';<br>&nbsp;&nbsp;
+              for(let i=str.length - 1; i>=0; i--) {<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                // console.log(`str[${i}]: ${str[i]}`);<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                newString += str[i];<br>&nbsp;&nbsp;&nbsp;&nbsp;
+                // console.log(newString);<br>&nbsp;&nbsp;
+              }<br>&nbsp;&nbsp;
+              return newString;<br>
+            }<br><br>
+
+            let reverse =reverseString("hello");<br>
+            console.log(reverse); // olleh
+          </blockquote>
+          <blockquote>
+            function reverseString(str) {<br>&nbsp;&nbsp;
+              /* str = str.split('');<br>&nbsp;&nbsp;
+              // console.log(`str: ${str}`);<br>&nbsp;&nbsp;
+              str.reverse();<br>&nbsp;&nbsp;
+              // console.log(`str: ${str}`);<br>&nbsp;&nbsp;
+              str = str.join(''); <br>&nbsp;&nbsp;
+              // console.log(`str: ${str}`); <br>&nbsp;&nbsp;
+              return str; */<br><br>&nbsp;&nbsp;
+
+              return str.split('').reverse().join('');<br>
+            }<br><br>
+
+            let reverse =reverseString("hello");<br>
+            console.log(reverse);  // olleh
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/reverse-a-string" target="_blank">reference fcc, click here.</a></p>
+          <p><a href="https://guide.freecodecamp.org/certifications/javascript-algorithms-and-data-structures/basic-algorithm-scripting/reverse-a-string/" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Factorialize-a-Numbers" class="main-section">
+        <header>Factorialize a Number</header>
+        <article>
+          <div class="challenge-instructions basic-algorithm-scripting col-xs-12">
+            <p class="wrappable">Return the factorial of the provided integer.</p>
+            <p class="wrappable">If the integer is represented with the letter n, a factorial is the product of all positive integers less than or equal to n.</p>
+            <p class="wrappable">Factorials are often represented with the shorthand notation <code>n!</code></p>
+            <p class="wrappable">For example: <code>5! = 1 * 2 * 3 * 4 * 5 = 120</code></p>
+            <p class="wrappable">Only integers greater than or equal to zero will be supplied to the function.</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Write your own code.</p>
+          </div>
+          <blockquote>
+            function factorialize(num) { <br>&nbsp;&nbsp;
+              /* console.log(num % 1 == 0) <br>&nbsp;&nbsp;
+              let newNum = 1; <br>&nbsp;&nbsp;
+              let i = 1; <br>&nbsp;&nbsp;
+              if (num % 1 == 0) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                while(i <= num) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  console.log('aqui'); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  newNum *= i; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  i++ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                } <br>&nbsp;&nbsp;
+              } else { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                return 0; <br>&nbsp;&nbsp;
+              } <br>&nbsp;&nbsp;
+              return newNum; */ <br><br>&nbsp;&nbsp;
+
+              if (num == 0) { return 1; } <br>&nbsp;&nbsp;
+              return num * factorialize(num-1); <br>
+            }<br><br>
+
+            // factorialize(5);
+            console.log(factorialize(5));
+          </blockquote>
+        </article>
+      </section>
+
+      <section id="Find-the-Longest-Word-in-a-String" class="main-section">
+        <header>Find the Longest Word in a String</header>
+        <article>
+          <div class="challenge-instructions basic-algorithm-scripting col-xs-12">
+            <p class="wrappable">Return the length of the longest word in the provided sentence.</p>
+            <p class="wrappable">Your response should be a number.</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Write your own code.</p>
+          </div>
+          <blockquote>
+            function findLongestWordLength(str) { <br>&nbsp;&nbsp;
+              let words = str.split(' '); <br>&nbsp;&nbsp;
+              let n = 0; <br>&nbsp;&nbsp;
+              for (let i=0; i < words.length; i++) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                if (words[i].length > n) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  n = words[i].length; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                } <br>&nbsp;&nbsp;
+              } <br>&nbsp;&nbsp;
+              return n; <br>
+            } <br><br>
+
+            let s = findLongestWordLength("The quick brown fox jumped over the lazy dog");
+            console.log(s);
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/find-the-longest-word-in-a-string" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Return-Largest-Numbers-in-Arrays" class="main-section">
+        <header>Return Largest Numbers in Arrays</header>
+        <article>
+          <div class="challenge-instructions basic-algorithm-scripting col-xs-12">
+            <p class="wrappable">Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.</p>
+            <p class="wrappable">Remember, you can iterate through an array with a simple for loop, and access each member with array syntax <code>arr[i]</code>.</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Write your own code.</p>
+          </div>
+          <blockquote>
+            function largestOfFour(arr) { <br>&nbsp;&nbsp;
+              // You can do this! <br>&nbsp;&nbsp;
+              let newArr = []; <br>&nbsp;&nbsp;
+              for (let i=0; i< arr.length; i++) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                let max = arr[i][0]; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                for (let j=0; j< arr[i].length; j++) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  if (arr[i][j] > max) { max = arr[i][j]} <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                } <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                newArr.push(max); <br>&nbsp;&nbsp;
+              } <br>&nbsp;&nbsp;
+              return newArr; <br>
+            } <br>
+
+            let arr = largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]); <br>
+            console.log(arr); // (4) [5, 27, 39, 1001]
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/return-largest-numbers-in-arrays" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Confirm-the-Ending" class="main-section">
+        <header>Confirm the Ending</header>
+        <article>
+          <div class="challenge-instructions basic-algorithm-scripting col-xs-12">
+            <p class="wrappable">Check if a string (first argument, <code>str</code>) ends with the given target string (second argument, <code>target</code>).</p>
+            <p class="wrappable">This challenge <em>can</em> be solved with the <code>.endsWith()</code> method, which was introduced in ES2015. But for the purpose of this challenge, we would like you to use one of the JavaScript substring methods instead.
+            </p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Write your own code.</p>
+          </div>
+          <blockquote>
+            function confirmEnding(str, target) { <br>&nbsp;&nbsp;
+              // "Never give up and good luck will find you." <br>&nbsp;&nbsp;
+              // -- Falcor <br>&nbsp;&nbsp;
+              /* let c = str.split('').reverse(); <br>&nbsp;&nbsp;
+              let t = target.split('').reverse(); <br>&nbsp;&nbsp;
+              for (let i = 0; i < t.length; i++) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                if (t[i] != c[i]) { return false} <br>&nbsp;&nbsp;
+              } <br>&nbsp;&nbsp;
+              return true; */ <br>&nbsp;&nbsp;
+              return str.slice(str.length - target.length) === target; <br>&nbsp;&nbsp;
+            } <br><br>
+
+            console.log(confirmEnding("Bastian", "an")); // true
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/confirm-the-ending" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Repeat-a-String-Repeat-a-String" class="main-section">
+        <header>Repeat a String Repeat a String</header>
+        <article>
+          <div class="challenge-instructions basic-algorithm-scripting col-xs-12">
+            <p class="wrappable">Repeat a given string <code>str</code> (first argument) for <code>num</code> times (second argument). Return an empty string if <code>num</code> is not a positive number.</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Write your own code.</p>
+          </div>
+          <blockquote>
+            function repeatStringNumTimes(str, num) { <br>&nbsp;&nbsp;
+              // repeat after me <br>&nbsp;&nbsp;
+              /* let newStr = ''; <br>&nbsp;&nbsp;
+              while (num > 0) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                newStr += str; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                num--; <br>&nbsp;&nbsp;
+              } <br>&nbsp;&nbsp;
+              console.log(newStr); <br>&nbsp;&nbsp;
+              return newStr; */ <br>&nbsp;&nbsp;
+              return num > 0 ? str.repeat(num) : '';
+            } <br><br>
+
+            repeatStringNumTimes("abc", 3); // abcabcbc<br>
+            repeatStringNumTimes("*", 3) // ***
+          </blockquote>
+        </article>
+      </section>
+
+      <section id="Truncate-a-String" class="main-section">
+        <header>Truncate a String</header>
+        <article>
+          <div class="challenge-instructions basic-algorithm-scripting col-xs-12">
+            <p class="wrappable">Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a <code>...</code> ending.</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Write your own code.</p>
+          </div>
+        </article>
+        <blockquote>
+          function truncateString(str, num) { <br>&nbsp;&nbsp;
+            // Clear out that junk in your trunk <br>&nbsp;&nbsp;
+            return str.length > num ? str.slice(0,num) + '...' : str; <br>
+          } <br><br>
+
+          truncateString("A-tisket a-tasket A green and yellow basket", 8);  // A-tisket...
+          truncateString("Peter Piper picked a peck of pickled peppers", 11);  // Peter Piper...
+        </blockquote>
+        <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/truncate-a-string" target="_blank">reference fcc, click here.</a></p>
+      </section>
+
+      <section id="Finders-Keepers" class="main-section">
+        <header>Finders Keepers</header>
+        <article>
+          <div class="challenge-instructions basic-algorithm-scripting col-xs-12">
+            <p class="wrappable">Create a function that looks through an array (first argument) and returns the first element in the array that passes a truth test (second argument). If no element passes the test, return undefined.</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+          </div>
+          <blockquote>
+            function findElement(arr, func) { <br>&nbsp;&nbsp;
+              for (let i=0; i< arr.length; i++) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                if (func(arr[i])) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  return arr[i]; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                } <br>&nbsp;&nbsp;
+              } <br>&nbsp;&nbsp;
+              return; <br>
+            } <br><br>
+
+            console.log(findElement([1, 2, 3, 4], num => num % 2 === 0)); // 2
+            console.log(findElement([1, 3, 5, 9], function(num) { return num % 2 === 0; }));  // undefined
+          </blockquote>
+        </article>
+      </section>
+
+      <section id="Boo-who" class="main-section">
+        <header>Boo who</header>
+        <article>
+          <div class="challenge-instructions basic-algorithm-scripting col-xs-12">
+            <p class="wrappable">Check if a value is classified as a boolean primitive. Return true or false.</p>
+            <p class="wrappable">Boolean primitives are true and false.</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+          </div>
+          <blockquote>
+            function booWho(bool) { <br>&nbsp;&nbsp;
+              // What is the new fad diet for ghost developers? The Boolean. <br>&nbsp;&nbsp;
+              return typeof bool === 'boolean'; <br>
+            } <br><br>
+
+            booWho(null); // false
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/boo-who" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Title-Case-a-Sentence" class="main-section">
+        <header>Title Case a Sentence</header>
+        <article>
+          <div class="challenge-instructions basic-algorithm-scripting col-xs-12">
+            <p class="wrappable">Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lower case.</p>
+            <p class="wrappable">For the purpose of this exercise, you should also capitalize connecting words like "the" and "of".</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Write your own code.</p>
+          </div>
+          <blockquote>
+            function titleCase(str) { <br>&nbsp;&nbsp;
+              /* 1. first reply <br>&nbsp;&nbsp;
+              let s = str.toLowerCase().split(' '); <br><br>&nbsp;&nbsp;
+
+              for (let i=0; i < s.length; i++) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                let w = s[i].split(''); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                w[0] = w[0].toUpperCase(); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                w = w.join(''); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                console.log(w); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                s[i] = w; <br><br>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                s[i] = s[i].replace(s[i].charAt(0), s[i].charAt(0).toUpperCase()); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                console.log(`s[i]: ${s[i]}`); <br>&nbsp;&nbsp;
+              } <br>&nbsp;&nbsp;
+              s = s.join(' '); <br>&nbsp;&nbsp;
+              console.log(s); <br>&nbsp;&nbsp;
+              return s; */ <br><br>&nbsp;&nbsp;
+
+              return str.toLowerCase().replace(/(^|\s)\S/g, (L) => L.toUpperCase()); <br>
+            } <br><br>
+
+            console.log(titleCase("I'm a little tea pot")); // I'm A Little Tea Pot<br>
+            console.log(titleCase("sHoRt AnD sToUt")); // Short And Stout
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/title-case-a-sentence" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Slice-and-Splice" class="main-section">
+        <header>Slice and Splice</header>
+        <article>
+          <div class="challenge-instructions basic-algorithm-scripting col-xs-12">
+            <p class="wrappable">You are given two arrays and an index.</p>
+            <p class="wrappable">Use the array methods <code>slice</code> and <code>splice</code> to copy each element of the first array into the second array, in order.</p>
+            <p class="wrappable">Begin inserting elements at index <code>n</code> of the second array.</p>
+            <p class="wrappable">Return the resulting array. The input arrays should remain the same after the function runs.</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Write your own code.</p>
+          </div>
+          <blockquote>
+            function frankenSplice(arr1, arr2, n) { <br>&nbsp;&nbsp;
+              // It's alive. It's alive! <br>&nbsp;&nbsp;
+              let copyArr = arr2.slice(); <br>&nbsp;&nbsp;
+              for (let i=arr1.length-1; i >= 0; i--) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                copyArr.splice(n, 0, arr1[i]); <br>&nbsp;&nbsp;
+              } <br>&nbsp;&nbsp;
+              // console.log(copyArr); <br>&nbsp;&nbsp;
+              return copyArr; <br>
+            } <br><br>
+
+            console.log(frankenSplice([1, 2, 3], [4, 5], 1)); // (5) [4, 1, 2, 3, 5]<br>
+            console.log(frankenSplice([1, 2], ["a", "b"], 1)); // (4) ["a", 1, 2, "b"]
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/slice-and-splice" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Falsy-Bouncer" class="main-section">
+        <header>Falsy Bouncer</header>
+        <article>
+          <div class="challenge-instructions basic-algorithm-scripting col-xs-12">
+            <p class="wrappable">Remove all falsy values from an array.</p>
+            <p class="wrappable">Falsy values in JavaScript are <code>false</code>, <code>null</code>, <code>0</code>, <code>""</code>, <code>undefined</code>, and <code>NaN</code>.</p>
+            <p class="wrappable">Hint: Try converting each value to a Boolean.</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Write your own code.</p>
+          </div>
+          <blockquote>
+            function bouncer(arr) { <br>&nbsp;&nbsp;
+              // Don't show a false ID to this bouncer. <br>&nbsp;&nbsp;
+              return arr.filter(Boolean); <br>
+            } <br><br>
+
+            console.log(bouncer([7, "ate", "", false, 9])); // (3) [7, "ate", 9]
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/falsy-bouncer" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Where-do-I-Belong" class="main-section">
+        <header>Where do I Belong</header>
+        <article>
+          <div class="challenge-instructions basic-algorithm-scripting col-xs-12">
+            <p class="wrappable">Return the lowest index at which a value (second argument) should be inserted into an array (first argument) once it has been sorted. The returned value should be a number.</p>
+            <p class="wrappable">For example, <code>getIndexToIns([1,2,3,4], 1.5)</code> should return <code>1</code> because it is greater than <code>1</code> (index 0), but less than <code>2</code> (index 1).</p>
+            <p class="wrappable">Likewise, <code>getIndexToIns([20,3,5], 19)</code> should return <code>2</code> because once the array has been sorted it will look like <code>[3,5,20]</code> and <code>19</code> is less than <code>20</code> (index 2)
+              and greater than <code>5</code> (index 1).</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Write your own code.</p>
+          </div>
+          <blockquote>
+            function getIndexToIns(arr, num) { <br>&nbsp;&nbsp;
+              // Find my place in this sorted array. <br>&nbsp;&nbsp;
+              /* method 1 <br>&nbsp;&nbsp;
+              if (arr.length === 0) return 0; <br>&nbsp;&nbsp;
+              arr.sort((a, b) => a-b); <br>&nbsp;&nbsp;
+              let n = undefined; <br>&nbsp;&nbsp;
+              arr.map((v, i) => { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                console.log(v) <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                if (v < num) n = i; <br>&nbsp;&nbsp;
+              }); <br>&nbsp;&nbsp;
+              console.log(n); <br>&nbsp;&nbsp;
+              // return num; <br>&nbsp;&nbsp;
+              return n != undefined ? n+1 : 0; */ <br><br>&nbsp;&nbsp;
+
+              /* method 2 <br>&nbsp;&nbsp;
+              let res = arr.sort(function(a,b){ return a-b; }) <br>&nbsp;&nbsp;
+              .findIndex(function(n) { return n >= num; }); <br>&nbsp;&nbsp;
+              console.log(res); <br>&nbsp;&nbsp;
+              return res === -1 ? arr.length : res; */ <br><br>&nbsp;&nbsp;
+
+              return arr.concat(num).sort((a, b) => a-b).indexOf(num); <br><br>
+            }
+
+            console.log(getIndexToIns([40, 60], 50)); // 1<br>
+            console.log(getIndexToIns([5, 3, 20, 3], 5)); // 2<br>
+            console.log(getIndexToIns([], 1)); // 0<br>
+            console.log(getIndexToIns([2, 10, 5], 15)); // 3<br>
+            console.log(getIndexToIns([40, 60], 50)); // 1<br>
+            console.log(getIndexToIns([10, 20, 30, 40, 50], 35)); // 3<br>
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/where-do-i-belong" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Mutations" class="main-section">
+        <header>Mutations</header>
+        <article>
+          <div class="challenge-instructions basic-algorithm-scripting col-xs-12">
+            <p class="wrappable">Return true if the string in the first element of the array contains all of the letters of the string in the second element of the array.</p>
+            <p class="wrappable">For example, <code>["hello", "Hello"]</code>, should return true because all of the letters in the second string are present in the first, ignoring case.</p>
+            <p class="wrappable">The arguments <code>["hello", "hey"]</code> should return false because the string "hello" does not contain a "y".</p>
+            <p class="wrappable">Lastly, <code>["Alien", "line"]</code>, should return true because all of the letters in "line" are present in "Alien".</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Write your own code.</p>
+          </div>
+          <blockquote>
+            function mutation(arr) { <br>&nbsp;&nbsp;
+              /* method 1 <br>&nbsp;&nbsp;
+              let test = arr[1].toLowerCase(); <br>&nbsp;&nbsp;
+              let word = arr[0].toLowerCase(); <br>&nbsp;&nbsp;
+              // console.log(test.length); <br>&nbsp;&nbsp;
+              for (let i = 0; i < test.length; i++) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                if (word.indexOf(test[i]) === -1) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  return false; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                } <br>&nbsp;&nbsp;
+              } <br>&nbsp;&nbsp;
+              return true; */ <br> <br>&nbsp;&nbsp;
+
+              return arr[1].toLowerCase() <br>&nbsp;&nbsp;
+              .split('') <br>&nbsp;&nbsp;
+              .every(function (l) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                return arr[0].toLowerCase().indexOf(l) != -1; <br>&nbsp;&nbsp;
+              }); <br>
+            } <br> <br>
+
+            console.log(mutation(["hello", "hey"])); // false
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/mutations" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Chunky-Monkey" class="main-section">
+        <header>Chunky Monkey</header>
+        <article>
+          <div class="challenge-instructions basic-algorithm-scripting col-xs-12">
+            <p class="wrappable">Write a function that splits an array (first argument) into groups the length of <code>size</code> (second argument) and returns them as a two-dimensional array.</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Write your own code.</p>
+          </div>
+          <blockquote>
+            function chunkArrayInGroups(arr, size) { <br>&nbsp;&nbsp;
+              // Break it up. <br>&nbsp;&nbsp;
+              let newArr = []; <br>&nbsp;&nbsp;
+              let d = Math.ceil(arr.length / size); <br>&nbsp;&nbsp;
+              let i=0; <br>&nbsp;&nbsp;
+              let j=0; <br>&nbsp;&nbsp;
+              // console.log(`d: ${d}`); <br> <br>&nbsp;&nbsp;
+
+              while (i < d) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                // console.log(`i: ${i}`); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                // console.log(`i: ${j}`); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                newArr.push(arr.slice(j, j+size)); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                j+=size; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                i++; <br>&nbsp;&nbsp;
+              } <br>&nbsp;&nbsp;
+              // console.log(newArr); <br>&nbsp;&nbsp;
+              return newArr; <br>&nbsp;&nbsp;
+            } <br> <br>
+
+            // chunkArrayInGroups(["a", "b", "c", "d"], 2); <br>
+            // console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4)); <br>
+            console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2));
+          </blockquote>
+          <blockquote>
+            function chunkArrayInGroups(arr, size) { <br>&nbsp;&nbsp;
+              // Break it up. <br>&nbsp;&nbsp;
+              var temp = []; <br>&nbsp;&nbsp;
+              for(var i=0; i < arr.length; i+=size) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                console.log(i); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                temp.push(arr.slice(i, i+size)); <br>&nbsp;&nbsp;
+              } <br>&nbsp;&nbsp;
+              return temp; <br>&nbsp;&nbsp;
+            } <br><br>&nbsp;&nbsp;
+
+            console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+          </blockquote>
+          <blockquote>
+            function chunkArrayInGroups(arr, size) { <br>&nbsp;&nbsp;
+              var newArr = []; <br>&nbsp;&nbsp;
+              while (arr.length) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                newArr.push(arr.splice(0,size)); <br>&nbsp;&nbsp;
+              } <br>&nbsp;&nbsp;
+              return newArr; <br>
+            }
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-algorithm-scripting/chunky-monkey" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+    </main>
+    <script type="text/javascript" src="../js/scripts.js"></script>
+  </body>
+</html>

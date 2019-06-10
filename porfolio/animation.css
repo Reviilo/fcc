@@ -1,0 +1,59 @@
+/*   Uso de la animacion */
+/* Use animation in indentifier */
+.animation-line:after {
+  content: '';
+
+  background: #9c7b7b;
+
+  display: block;
+  position: relative;
+
+  width: 0%;
+  height: 2px;
+
+  bottom: -1px;
+}
+
+.animation-line:hover:after {
+  -webkit-animation-name: line; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: line;
+  animation-duration: 1s;
+}
+
+.animation-line:hover:after {
+  width: 110%;
+  left: -5%;
+  right: -5%;
+}
+
+
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes line {
+  0% {
+    width: 0%;
+    left: 55%;
+    right: 55%;
+
+  } 100% {
+    width: 110%;
+    left: -5%;
+    right: -5$;
+  }
+}
+
+/* Standard syntax */
+@keyframes line {
+  0% {
+    width: 0%;
+    left: 55%;
+    right: 55%;
+
+  } 100% {
+    width: 110%;
+    left: -5%;
+    right: -5$;
+  }
+}

@@ -1,0 +1,1 @@
+///<reference path='/Users/oramirez/.vscode/extensions/bespokify.beau-vscode-0.1.36/data/docs/beau.d.ts'/>

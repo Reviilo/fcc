@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Basic JS Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+  </head>
+  <body>
+
+    <nav id="navbar">
+      <header>
+        Basic JS Documentation
+      </header>
+      <ul>
+        <li class="container-nav-li"><a class="nav-link" href="#Introdution" rel="internal">Introdution</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Escape-Sequences-in-Strings" rel="internal">Escape Sequences in Strings</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Use-Bracket-Notation-to-Find-the-First-Character-in-a-String" rel="internal">Use Bracket Notation to Find the First Character in a String</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Use-Bracket-Notation-to-Find-the-Last-Character-in-a-String" rel="internal">Use Bracket Notation to Find the Last Character in a String</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Nest-one-Array-within-Another-Array" rel="internal">Nest one Array within Another Array</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Manipulate-Arrays-With-push" rel="internal">Manipulate Arrays With push()</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Manipulate-Arrays-With-pop" rel="internal">Manipulate Arrays With pop()</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Manipulate-Arrays-With-shift" rel="internal">Manipulate Arrays With shift()</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Manipulate-Arrays-With-unshift" rel="internal">Manipulate Arrays With unshift()</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Return-a-Value-from-a-Function-with-Return" rel="internal">Return a Value from a Function with Return</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Understanding-Undefined-Value-returned-from-a-Function" rel="internal">Understanding Undefined Value returned from a Function</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Selecting-from-Many-Options-with-Switch-Statements" rel="internal">Selecting from Many Options with Switch Statements</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Build-JavaScript-Objects" rel="internal">Build JavaScript Objects</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Accessing-Object-Properties-with-Dot-Notation" rel="internal">Accessing Object Properties with Dot Notation</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Delete-Properties-from-a-JavaScript-Object" rel="internal">Delete Properties from a JavaScript Object</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Testing-Objects-for-Properties" rel="internal">Testing Objects for Properties</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Generate-Random-Fractions-with-JavaScript" rel="internal">Generate Random Fractions with JavaScript</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Generate-Random-Whole-Numbers-with-JavaScript" rel="internal">Generate Random Whole Numbers with JavaScript</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Generate-Random-Whole-Numbers-within-a-Range" rel="internal">Generate Random Whole Numbers within a Range</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Use-the-parseInt-Function" rel="internal">Use the parseInt Function</a></li>
+      </ul>
+      <div class="nav-mobile"> Menu </div>
+    </nav>
+
+    <main id="main-doc">
+      <!--
+        <p><a href="" target="_blank">reference fcc, click here.</a></p>
+      -->
+
+      <section id="Introdution" class="main-section">
+        <header>Introdution</header>
+        <article>
+          <p>
+            Esta es una documentacion con ejemplos de lo aprendido en js. <br>
+            Estas notas son parte de lo aprendido en FreeCodeCamp <br>
+            Esto es lo que me ha llamado mas a la atencion <br>
+            Esto servira para ser usado en cualquier momento <br>
+            Esto es Documentacion de JS
+          </p>
+        </article>
+      </section>
+
+      <section id="Escape-Sequences-in-Strings" class="main-section">
+        <header>Escape-Sequences-in-Strings</header>
+        <article>
+          <p>Quotes are not the only characters that can be escaped inside a string.
+            There are two reasons to use escaping characters:
+            First is to allow you to use characters you might not otherwise be able to type out, such as a backspace.
+            Second is to allow you to represent multiple quotes in a string without JavaScript misinterpreting what you mean.
+            We learned this in the previous challenge.</p>
+
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Output</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>\'</code></td>
+                  <td>single quote</td>
+                </tr>
+                <tr>
+                  <td><code>\"</code></td>
+                  <td>double quote</td>
+                </tr>
+                <tr>
+                  <td><code>\\</code></td>
+                  <td>backslash</td>
+                </tr>
+                <tr>
+                  <td><code>\n</code></td>
+                  <td>newline</td>
+                </tr>
+                <tr>
+                  <td><code>\r</code></td>
+                  <td>carriage return</td>
+                </tr>
+                <tr>
+                  <td><code>\t</code></td>
+                  <td>tab</td>
+                </tr>
+                <tr>
+                  <td><code>\b</code></td>
+                  <td>backspace</td>
+                </tr>
+                <tr>
+                  <td><code>\f</code></td>
+                  <td>form feed</td>
+                </tr>
+              </tbody>
+            </table>
+
+        </article>
+      </section>
+
+      <section id="Use-Bracket-Notation-to-Find-the-First-Character-in-a-String" class="main-section">
+        <header>Use Bracket Notation to Find the First Character in a String</header>
+        <article>
+          <p class="wrappable"><code>Bracket notation</code> is a way to get a character at a specific <code>index</code> within a string.</p>
+          <p class="wrappable">Most modern programming languages, like JavaScript, don't start counting at 1 like humans do. They start at 0. This is referred to as <dfn>Zero-based</dfn> indexing.</p>
+          <p class="wrappable">For example, the character at index 0 in the word "Charles" is "C". So if <code>var firstName = "Charles"</code>, you can get the value of the first letter of the string by using <code>firstName[0]</code>.</p>
+          <div><blockquote><code>var firstName = "Charles";<br> var firstLetter = firstName[0];<br> console.log(firstLetter); // Returns C</code></blockquote></div>
+        </article>
+      </section>
+
+      <section id="Use-Bracket-Notation-to-Find-the-Last-Character-in-a-String" class="main-section">
+        <header>Use Bracket Notation to Find the Last Character in a String</header>
+        <article>
+          <p class="wrappable">In order to get the last letter of a string, you can subtract one from the string's length.</p>
+          <p class="wrappable">For example, if <code>var firstName = "Charles"</code>, you can get the value of the last letter of the string by using <code>firstName[firstName.length - 1]</code>.</p>
+          <div><blockquote><code>var firstName = "Charles";<br> var lastLetter = firstName[firstName.length - 1];<br> console.log(lastLetter); // Returns s</code></blockquote></div>
+        </article>
+      </section>
+
+      <section id="Nest-one-Array-within-Another-Array" class="main-section">
+        <header>Nest one Array within Another Array</header>
+        <article>
+          <p class="wrappable">You can also nest arrays within other arrays, like this: <code>[["Bulls", 23], ["White Sox", 45]]</code>. This is also called a <dfn>Multi-dimensional Array<dfn>.</dfn></dfn></p>
+        </article>
+      </section>
+
+      <section id="Manipulate-Arrays-With-push" class="main-section">
+        <header>Manipulate Arrays With push()</header>
+        <article>
+          <p class="wrappable">An easy way to append data to the end of an array is via the <code>push()</code> function.</p>
+          <p class="wrappable"><code>.push()</code> takes one or more <dfn>parameters</dfn> and "pushes" them onto the end of the array.</p>
+          <div><blockquote>var arr = [1,2,3];<br>arr.push(4);<br>// arr is now [1,2,3,4]</blockquote></div>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-push" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Manipulate-Arrays-With-pop" class="main-section">
+        <header>Manipulate Arrays With pop()</header>
+        <article>
+          <p class="wrappable">Another way to change the data in an array is with the <code>.pop()</code> function.</p>
+          <p class="wrappable"><code>.pop()</code> is used to "pop" a value off of the end of an array. We can store this "popped off" value by assigning it to a variable. In other words, <code>.pop()</code> removes the last element from an array and returns that element.</p>
+          <p class="wrappable">Any type of entry can be "popped" off of an array - numbers, strings, even nested arrays.</p>
+          <div><blockquote><code>var threeArr = [1, 4, 6];<br> var oneDown = threeArr.pop();<br> console.log(oneDown); // Returns 6<br> console.log(threeArr); // Returns [1, 4]</code></blockquote></div>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-pop" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Manipulate-Arrays-With-shift" class="main-section">
+        <header>Manipulate Arrays With shift()</header>
+        <article>
+          <p class="wrappable"><code>pop()</code> always removes the last element of an array. What if you want to remove the first?</p>
+          <p class="wrappable">That's where <code>.shift()</code> comes in. It works just like <code>.pop()</code>, except it removes the first element instead of the last.</p>
+          <div><blockquote><code>var threeArr = [1, 4, 6];<br> var oneUp = threeArr.shift();<br> console.log(oneUp); // Returns 1<br> console.log(threeArr); // Returns [4, 6]</code></blockquote></div>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-shift" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Manipulate-Arrays-With-unshift" class="main-section">
+        <header>Manipulate Arrays With unshift()</header>
+        <article>
+          <p class="wrappable">Not only can you <code>shift</code> elements off of the beginning of an array, you can also <code>unshift</code> elements to the beginning of an array i.e. add elements in front of the array.</p>
+          <p class="wrappable"><code>.unshift()</code> works exactly like <code>.push()</code>, but instead of adding the element at the end of the array, <code>unshift()</code> adds the element at the beginning of the array.</p>
+          <div><blockquote><code>var myArray = [1, 4, 6];<br> myArray.unshift(2);<br> console.log(myArray); // Returns [2, 1, 4, 6]</code></blockquote></div>
+        </article>
+      </section>
+
+      <section id="Return-a-Value-from-a-Function-with-Return" class="main-section">
+        <header>Return a Value from a Function with Return</header>
+        <article>
+          <p class="wrappable">We can pass values into a function with <dfn>arguments</dfn>. You can use a <code>return</code> statement to send a value back out of a function.</p>
+          <p class="wrappable"><strong>Example</strong></p>
+          <div><blockquote>function plusThree(num) {<br>&nbsp;&nbsp;return num + 3;<br>}<br>var answer = plusThree(5); // 8</blockquote></div>
+          <p class="wrappable"><code>plusThree</code> takes an <dfn>argument</dfn> for <code>num</code> and returns a value equal to <code>num + 3</code>.</p>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/return-a-value-from-a-function-with-return" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Understanding-Undefined-Value-returned-from-a-Function" class="main-section">
+        <header>Understanding Undefined Value returned from a Function</header>
+        <article>
+          <p class="wrappable">A function can include the <code>return</code> statement but it does not have to. In the case that the function doesn't have a <code>return</code> statement, when you call it, the function processes the inner code but the returned value is <code>undefined</code>.</p>
+          <p class="wrappable"><strong>Example</strong></p>
+          <div><blockquote>var sum = 0;<br>function addSum(num) {<br>&nbsp;&nbsp;sum = sum + num;<br>}<br>var returnedValue = addSum(3); // sum will be modified but returned value is undefined</blockquote></div>
+          <p class="wrappable"><code>addSum</code> is a function without a <code>return</code> statement. The function will change the global <code>sum</code> variable but the returned value of the function is <code>undefined</code></p>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/understanding-undefined-value-returned-from-a-function" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Selecting-from-Many-Options-with-Switch-Statements" class="main-section">
+        <header>Selecting from Many Options with Switch Statements</header>
+        <article>
+          <p class="wrappable">If you have many options to choose from, use a <code>switch</code> statement. A <code>switch</code> statement tests a value and can have many <code>case</code> statements which define various possible values. Statements are executed from the first matched <code>case</code> value until a <code>break</code> is encountered.</p>
+          <p class="wrappable">Here is a <dfn>pseudocode</dfn> example:</p>
+          <div><blockquote>switch(num) {<br>&nbsp;&nbsp;case value1:<br>&nbsp;&nbsp;&nbsp;&nbsp;statement1;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>&nbsp;&nbsp;case value2:<br>&nbsp;&nbsp;&nbsp;&nbsp;statement2;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>...<br>&nbsp;&nbsp;case valueN:<br>&nbsp;&nbsp;&nbsp;&nbsp;statementN;<br>&nbsp;&nbsp;&nbsp;&nbsp;break;<br>}</blockquote></div>
+          <p class="wrappable"><code>case</code> values are tested with strict equality (<code>===</code>). The <code>break</code> tells JavaScript to stop executing statements. If the <code>break</code> is omitted, the next statement will be executed.</p>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/selecting-from-many-options-with-switch-statements" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Build-JavaScript-Objects" class="main-section">
+        <header>Build JavaScript Objects</header>
+        <article>
+          <p class="wrappable">You may have heard the term <code>object</code> before.</p>
+          <p class="wrappable">Objects are similar to <code>arrays</code>, except that instead of using indexes to access and modify their data, you access the data in objects through what are called <code>properties</code>.</p>
+          <p class="wrappable">Objects are useful for storing data in a structured way, and can represent real world objects, like a cat.</p>
+          <p class="wrappable">Here's a sample cat object:</p>
+          <div><blockquote>var cat = {<br>&nbsp;&nbsp;"name": "Whiskers",<br>&nbsp;&nbsp;"legs": 4,<br>&nbsp;&nbsp;"tails": 1,<br>&nbsp;&nbsp;"enemies": ["Water", "Dogs"]<br>};</blockquote></div>
+          <p class="wrappable">In this example, all the properties are stored as strings, such as - <code>"name"</code>, <code>"legs"</code>, and <code>"tails"</code>. However, you can also use numbers as properties. You can even omit the quotes for single-word string properties, as follows:</p>
+          <div><blockquote>var anotherObject = {<br>&nbsp;&nbsp;make: "Ford",<br>&nbsp;&nbsp;5: "five",<br>&nbsp;&nbsp;"model": "focus"<br>};</blockquote></div>
+          <p class="wrappable">However, if your object has any non-string properties, JavaScript will automatically typecast them as strings.</p>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/build-javascript-objects" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Accessing-Object-Properties-with-Dot-Notation" class="main-section">
+        <header>Accessing Object Properties with Dot Notation</header>
+        <article>
+          <p class="wrappable">There are two ways to access the properties of an object: dot notation (<code>.</code>) and bracket notation (<code>[]</code>), similar to an array.</p>
+          <p class="wrappable">Dot notation is what you use when you know the name of the property you're trying to access ahead of time.</p>
+          <p class="wrappable">Here is a sample of using dot notation (<code>.</code>) to read an object's property:</p>
+          <div><blockquote>var myObj = {<br>&nbsp;&nbsp;prop1: "val1",<br>&nbsp;&nbsp;prop2: "val2"<br>};<br>var prop1val = myObj.prop1; // val1<br>var prop2val = myObj.prop2; // val2</blockquote></div>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/accessing-object-properties-with-dot-notation" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Delete-Properties-from-a-JavaScript-Object" class="main-section">
+        <header>Delete Properties from a JavaScript Object</header>
+        <article>
+          <p class="wrappable">We can also delete properties from objects like this:</p>
+          <p class="wrappable"><code>delete ourDog.bark;</code></p>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/delete-properties-from-a-javascript-object" target="_blank">reference fcc, click here.</a></p>
+
+        </article>
+      </section>
+
+      <section id="Testing-Objects-for-Properties" class="main-section">
+        <header>Testing Objects for Properties</header>
+        <article>
+          <p class="wrappable">Sometimes it is useful to check if the property of a given object exists or not. We can use the <code>.hasOwnProperty(propname)</code> method of objects to determine if that object has the given property name. <code>.hasOwnProperty()</code> returns <code>true</code> or <code>false</code> if the property is found or not.</p>
+          <p class="wrappable"><strong>Example</strong></p>
+          <div><blockquote>var myObj = {<br>&nbsp;&nbsp;top: "hat",<br>&nbsp;&nbsp;bottom: "pants"<br>};<br>myObj.hasOwnProperty("top");    // true<br>myObj.hasOwnProperty("middle"); // false</blockquote></div>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/testing-objects-for-properties" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Generate-Random-Fractions-with-JavaScript" class="main-section">
+        <header>Generate Random Fractions with JavaScript</header>
+        <article>
+          <p class="wrappable">Random numbers are useful for creating random behavior.</p>
+          <p class="wrappable">JavaScript has a <code>Math.random()</code> function that generates a random decimal number between <code>0</code> (inclusive) and not quite up to <code>1</code> (exclusive). Thus <code>Math.random()</code> can return a <code>0</code> but never quite return a <code>1</code></p>
+          <p class="wrappable"><strong>Note</strong><br>Like <a href="storing-values-with-the-assignment-operator" target="_blank">Storing Values with the Equal Operator</a>, all function calls will be resolved before the <code>return</code> executes, so we can <code>return</code> the value of the <code>Math.random()</code> function.</p>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/generate-random-fractions-with-javascript" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Generate-Random-Whole-Numbers-with-JavaScript" class="main-section">
+        <header>Generate Random Whole Numbers with JavaScript</header>
+        <article>
+          <p class="wrappable">It's great that we can generate random decimal numbers, but it's even more useful if we use it to generate random whole numbers.</p>
+          <div><ol><li>Use <code>Math.random()</code> to generate a random decimal.</li><li>Multiply that random decimal by <code>20</code>.</li><li>Use another function, <code>Math.floor()</code> to round the number down to its nearest whole number.</li></ol></div>
+          <p></p>
+          <p class="wrappable">Remember that <code>Math.random()</code> can never quite return a <code>1</code> and, because we're rounding down, it's impossible to actually get <code>20</code>. This technique will give us a whole number between <code>0</code> and <code>19</code>.</p>
+          <p class="wrappable">Putting everything together, this is what our code looks like:</p>
+          <p class="wrappable"><code>Math.floor(Math.random() * 20);</code></p>
+          <p class="wrappable">We are calling <code>Math.random()</code>, multiplying the result by 20, then passing the value to <code>Math.floor()</code> function to round the value down to the nearest whole number.</p>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/generate-random-whole-numbers-with-javascript" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Generate-Random-Whole-Numbers-within-a-Range" class="main-section">
+        <header>Generate Random Whole Numbers within a Range</header>
+        <article>
+          <p class="wrappable">Instead of generating a random number between zero and a given number like we did before, we can generate a random number that falls within a range of two specific numbers.</p>
+          <p class="wrappable">To do this, we'll define a minimum number <code>min</code> and a maximum number <code>max</code>.</p>
+          <p class="wrappable">Here's the formula we'll use. Take a moment to read it and try to understand what this code is doing:</p>
+          <p class="wrappable"><code>Math.floor(Math.random() * (max - min + 1)) + min</code></p>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/generate-random-whole-numbers-within-a-range" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Use-the-parseInt-Function" class="main-section">
+        <header>Use the parseInt Function</header>
+        <article>
+          <p class="wrappable">The <code>parseInt()</code> function parses a string and returns an integer. Here's an example:</p>
+          <p class="wrappable"><code>var a = parseInt("007");</code></p>
+          <p class="wrappable">The above function converts the string "007" to an integer 7. If the first character in the string can't be converted into a number, then it returns <code>NaN</code>.</p>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-javascript/use-the-parseint-function" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+    </main>
+    <script type="text/javascript" src="../js/scripts.js"></script>
+
+  </body>
+</html>

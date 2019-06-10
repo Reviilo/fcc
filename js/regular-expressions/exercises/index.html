@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ES6 JS Excercices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+  </head>
+  <body>
+
+    <nav id="navbar">
+      <header>
+        Excercices
+      </header>
+      <ul id="nav-list" class="nav-list">
+        <li class="container-nav-li"><a class="nav-link" href="#Introdution" rel="internal">Introdution</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Restrict-Possible-Usernames" rel="internal">Restrict Possible Usernames</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Reuse-Patterns-Using-Capture-Groups" rel="internal">Reuse Patterns Using Capture Groups</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Use-Capture-Groups-to-Search-and-Replace" rel="internal">Use Capture Groups to Search and Replace</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Remove-Whitespace-from-Start-and-End" rel="internal">Remove Whitespace from Start and End</a></li>
+      </ul>
+      <div class="nav-mobile"> Menu </div>
+    </nav>
+
+    <main id="main-doc">
+      <!--
+        <p><a href="" target="_blank">reference fcc, click here.</a></p>
+      -->
+
+      <section id="Introdution" class="main-section">
+        <header>Introdution</header>
+        <article>
+          <p>
+            Esta es una documentacion de los ejercicios que mas me llamaron la atencion en FCC.
+          </p>
+        </article>
+      </section>
+
+      <section id="Restrict-Possible-Usernames" class="main-section">
+        <header>Restrict Possible Usernames</header>
+        <article>
+          <div class="challenge-instructions regular-expressions col-xs-12">
+            <p class="wrappable">Usernames are used everywhere on the internet. They are what give users a unique identity on their favorite sites.</p>
+            <p class="wrappable">You need to check all the usernames in a database. Here are some simple rules that users have to follow when creating their username.</p>
+            <p class="wrappable">1) The only numbers in the username have to be at the end. There can be zero or more of them at the end.</p>
+            <p class="wrappable">2) Username letters can be lowercase and uppercase.</p>
+            <p class="wrappable">3) Usernames have to be at least two characters long. A two-letter username can only use alphabet letter characters.</p>
+            <p class="wrappable">
+              <hr>
+            </p>
+            <p class="wrappable">Change the regex <code>userCheck</code> to fit the constraints listed above.</p>
+            <blockquote>
+              let username = "JackOfAllTrades";<br>
+              let userCheck = /[a-zA-Z]{2,}\d*$/; // Change this line<br>
+              let result = userCheck.test(username);<br>
+              console.log(result);<br>
+            </blockquote>
+            <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/regular-expressions/restrict-possible-usernames" target="_blank">reference fcc, click here.</a></p>
+          </div>
+        </article>
+      </section>
+
+      <section id="Reuse-Patterns-Using-Capture-Groups" class="main-section">
+        <header>Reuse Patterns Using Capture Groups</header>
+        <article>
+          <p class="wrappable">Use <code>capture groups</code> in <code>reRegex</code> to match numbers that are repeated only three times in a string, each separated by a space.</p>
+          <blockquote>
+            let repeatNum = "42 42 42";<br>
+            let reRegex = /^(\d+)\s\1\s\1$/; // Change this line<br>
+            let result = reRegex.test(repeatNum);<br>
+            console.log(result);<br>  // true
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/regular-expressions/reuse-patterns-using-capture-groups" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Use-Capture-Groups-to-Search-and-Replace" class="main-section">
+        <header>Use Capture Groups to Search and Replace</header>
+        <article>
+          <p class="wrappable">Write a regex so that it will search for the string <code>"good"</code>. Then update the <code>replaceText</code> variable to replace <code>"good"</code> with <code>"okey-dokey"</code>.</p>
+          <blockquote>
+            let huhText = "This sandwich is good.";<br>
+            let fixRegex = /good/; // Change this line<br>
+            let replaceText = 'okey-dokey'; // Change this line<br>
+            let result = huhText.replace(fixRegex, replaceText);<br>
+            console.log(result);  //This sandwich is okey-dokey.
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/regular-expressions/use-capture-groups-to-search-and-replace" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Remove-Whitespace-from-Start-and-End" class="main-section">
+        <header>Remove Whitespace from Start and End</header>
+        <article>
+          <p class="wrappable">Write a regex and use the appropriate string methods to remove whitespace at the beginning and end of strings.</p>
+          <blockquote>
+            let hello = "   Hello, World!  ";<br>
+            let wsRegex = /^\s+|\s+$/g; // Change this line<br>
+            let result = hello.replace(wsRegex, ''); // Change this line<br>
+            console.log(result);  // Hello, World!
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/regular-expressions/remove-whitespace-from-start-and-end" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+    </main>
+    <script type="text/javascript" src="../js/scripts.js"></script>
+  </body>
+</html>

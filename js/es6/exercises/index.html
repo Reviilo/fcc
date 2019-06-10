@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ES6 JS Excercices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+  </head>
+  <body>
+
+    <nav id="navbar">
+      <header>
+        ES6 JS Excercices
+      </header>
+      <ul>
+        <li class="container-nav-li"><a class="nav-link" href="#Introdution" rel="internal">Introdution</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Write-Higher-Order-Arrow-Functions" rel="internal">Write Higher Order Arrow Functions</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Use-getters-and-setters-to-Control-Access-to-an-Object" rel="internal">Use getters and setters to Control Access to an Object</a></li>
+      </ul>
+      <div class="nav-mobile"> Menu </div>
+    </nav>
+
+    <main id="main-doc">
+      <!--
+        <p><a href="" target="_blank">reference fcc, click here.</a></p>
+      -->
+
+      <section id="Introdution" class="main-section">
+        <header>Introdution</header>
+        <article>
+          <p>
+            Esta es una documentacion de los ejercicios que mas me llamaron la atencion de Basic JS em FCC.
+          </p>
+        </article>
+      </section>
+
+      <section id="Write-Higher-Order-Arrow-Functions" class="main-section">
+        <header>Write Higher Order Arrow Functions</header>
+        <article>
+          <p class="wrappable">Use arrow function syntax to compute the square of only the positive integers (decimal numbers are not integers) in the array <code>realNumberArray</code> and store the new array in the variable <code>squaredIntegers</code>.</p>
+          <blockquote>
+            const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];<br>
+            const squareList = (arr) => {<br> &nbsp;&nbsp;
+              "use strict";<br> &nbsp;&nbsp;
+              // change code below this line<br> &nbsp;&nbsp;
+              const integers = arr.filter((item) => item >= 0 && item % 1 == 0);<br> &nbsp;&nbsp;
+              const squaredIntegers = integers.map((item) => item * item); <br> &nbsp;&nbsp;
+              // change code above this line <br> &nbsp;&nbsp;
+              return squaredIntegers; <br>
+            }; <br> <br>
+            // test your code <br>
+            const squaredIntegers = squareList(realNumberArray); <br>
+            console.log(squaredIntegers);
+          </blockquote>
+        </article>
+      </section>
+
+      <section id="Use-getters-and-setters-to-Control-Access-to-an-Object" class="main-section">
+        <header>Use getters and setters to Control Access to an Object</header>
+        <article>
+          <div class="challenge-instructions es6 col-xs-12"><p class="wrappable">You can obtain values from an object, and set a value of a property within an object.</p><p class="wrappable">These are classically called <dfn>getters</dfn> and <dfn>setters</dfn>.</p><p class="wrappable">Getter functions are meant to simply return (get) the value of an object's private variable to the user without the user directly accessing the private variable.</p><p class="wrappable">Setter functions are meant to modify (set) the value of an object's private variable based on the value passed into the setter function. This change could involve calculations, or even overwriting the previous value completely.</p><div><blockquote>class Book {<br>&nbsp;&nbsp;constructor(author) {<br>&nbsp;&nbsp;&nbsp;&nbsp;this._author = author;<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;// getter<br>&nbsp;&nbsp;get writer(){<br>&nbsp;&nbsp;&nbsp;&nbsp;return this._author;<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;// setter<br>&nbsp;&nbsp;set writer(updatedAuthor){<br>&nbsp;&nbsp;&nbsp;&nbsp;this._author = updatedAuthor;<br>&nbsp;&nbsp;}<br>}<br>const lol = new Book('anonymous');<br>console.log(lol.writer);&nbsp;&nbsp;// anonymous<br>lol.writer = 'wut';<br>console.log(lol.writer);&nbsp;&nbsp;// wut</blockquote></div><p class="wrappable">Notice the syntax we are using to invoke the getter and setter - as if they are not even functions.</p><p class="wrappable">Getters and setters are important, because they hide internal implementation details.</p><p class="wrappable"><hr></p><p class="wrappable">Use <code>class</code> keyword to create a Thermostat class. The constructor accepts Fahrenheit temperature.</p><p class="wrappable">Now create <code>getter</code> and <code>setter</code> in the class, to obtain the temperature in Celsius scale.</p><p class="wrappable">Remember that <code>C = 5/9 * (F - 32)</code> and <code>F = C * 9.0 / 5 + 32</code>, where F is the value of temperature in Fahrenheit scale, and C is the value of the same temperature in Celsius scale</p><p class="wrappable">Note</p><p class="wrappable">When you implement this, you would be tracking the temperature inside the class in one scale - either Fahrenheit or Celsius.</p><p class="wrappable">This is the power of getter or setter - you are creating an API for another user, who would get the correct result, no matter which one you track.</p><p class="wrappable">In other words, you are abstracting implementation details from the consumer.</p></div>
+          <blockquote>
+            function makeClass() { <br>&nbsp;&nbsp;
+              "use strict"; <br>&nbsp;&nbsp;
+              /* Alter code below this line */ <br>&nbsp;&nbsp;
+              class Thermostat { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                constructor(temperature) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  this.temperature = (5/9 * (temperature - 32)); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                } <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                // getter <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                get temperatureCelcius() { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  return this.temperature; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                } <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                // setter <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                set temperatureCelcius(updateTemperature) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  this.temperature = updateTemperature; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                } <br>&nbsp;&nbsp;
+              } <br>&nbsp;&nbsp;
+              /* Alter code above this line */ <br>&nbsp;&nbsp;
+              return Thermostat; <br>
+            } <br>
+            const Thermostat = makeClass(); <br>
+            const thermos = new Thermostat(76); // setting in Fahrenheit scale <br>
+            let temp = thermos.temperature; // 24.44 in C <br>
+            thermos.temperature = 26; <br>
+            temp = thermos.temperature; // 26 in C <br>
+          </blockquote>
+        </article>
+      </section>
+    </main>
+    <script type="text/javascript" src="../js/scripts.js"></script>
+  </body>
+</html>

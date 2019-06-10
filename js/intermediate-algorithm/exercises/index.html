@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Excercices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+  </head>
+  <body>
+
+    <nav id="navbar">
+      <header>
+        Excercices
+      </header>
+      <ul>
+        <li class="container-nav-li"><a class="nav-link" href="#Introdution" rel="internal">Introdution</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#sum-all-numbers-in-a-range" rel="internal">Sum All Numbers in a Range</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#diff-two-arrays" rel="internal">Diff Two Arrays</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#seek-and-destroy" rel="internal">Seek and Destroy</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#wherefore-art-thou" rel="internal">Wherefore art thou</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#spinal-tap-case" rel="internal">Spinal Tap Case</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#pig-latin" rel="internal">Pig Latin</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#search-and-replace" rel="internal">Search and Replace</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#dna-pairing" rel="internal">DNA Pairing</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#missing-letters" rel="internal">Missing letters</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#sorted-union" rel="internal">Sorted Union</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#convert-html-entities" rel="internal">Convert HTML Entities</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#sum-all-odd-fibonacci-numbers" rel="internal">Sum All Odd Fibonacci Numbers</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#sum-all-primes" rel="internal">Sum All Primes</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#smallest-common-multiple" rel="internal">Smallest Common Multiple</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#drop-it" rel="internal">Drop it</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#steamroller" rel="internal">Steamroller</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#binary-agents" rel="internal">Binary Agents</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#everything-be-true" rel="internal">Everything Be True</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#arguments-optional" rel="internal">Arguments Optional</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#make-a-person" rel="internal">Make a Person</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#map-the-debris" rel="internal">Map the Debris</a></li>
+      </ul>
+      <div class="nav-mobile"> Menu </div>
+    </nav>
+
+    <main id="main-doc">
+      <!--
+        <p><a href="" target="_blank">reference fcc, click here.</a></p>
+      -->
+
+      <section id="Introdution" class="main-section">
+        <header>Introdution</header>
+        <article>
+          <p>
+            Esta es una documentacion de los ejercicios que mas me llamaron la atencion en FCC.
+          </p>
+        </article>
+      </section>
+
+      <section id="sum-all-numbers-in-a-range" class="main-section">
+        <header>Sum All Numbers in a Range</header>
+        <article>
+          <div class="challenge-instructions intermediate-algorithm-scripting col-xs-12">
+            <p class="wrappable">We'll pass you an array of two numbers. Return the sum of those two numbers plus the sum of all the numbers between them.</p>
+            <p class="wrappable">The lowest number will not always come first.</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+          </div>
+          <blockquote>
+            function sumAll(arr) { <br>&nbsp;&nbsp;
+              var newArr = arr.sort(function (a, b) { return a - b}); <br>&nbsp;&nbsp;
+              var total = 0; <br> <br>&nbsp;&nbsp;
+
+              for (var i=newArr[0]; i <= newArr[1]; i++) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                total += i; <br>&nbsp;&nbsp;
+              } <br>&nbsp;&nbsp;
+              return total; <br>
+            } <br> <br>
+
+            sumAll([1, 4]); <br> <br>
+
+            sumAll([10, 5]);
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/sum-all-numbers-in-a-range" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="diff-two-arrays" class="main-section">
+        <header>Diff Two Arrays</header>
+        <article>
+          <div class="challenge-instructions intermediate-algorithm-scripting col-xs-12">
+            <p class="wrappable">Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both. In other words, return the symmetric difference of the two arrays.</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+            <p class="wrappable"><strong>Note</strong><br>You can return the array with its elements in any order.</p>
+          </div>
+          <blockquote>
+            function diffArray(arr1, arr2) { <br>&nbsp;&nbsp;
+              var arrMax = arr1.length > arr2.length ? arr1 : arr2; <br>&nbsp;&nbsp;
+              var arrMin = arr1.length < arr2.length ? arr1 : arr2; <br>&nbsp;&nbsp;
+              if (arr1.length == arr2.length) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                arrMax = arr2; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                arrMin = arr1; <br>&nbsp;&nbsp;
+              }  <br>&nbsp;&nbsp;
+              console.log(arrMax); <br>&nbsp;&nbsp;
+              console.log(arrMin);  <br> <br>&nbsp;&nbsp;
+
+              var newArr = []; <br> <br>&nbsp;&nbsp;
+
+              newArr = arrMax.filter((e, i, arr) => { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                var la = arrMin.some((j) => { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  console.log(`i == j  ${e} == ${j} : ${e == j}`); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  return e == j; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                });  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                console.log(!la);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                return !la;  <br>&nbsp;&nbsp;
+              }); <br>&nbsp;&nbsp;
+              console.log('primera vuelta');  <br>&nbsp;&nbsp;
+              console.log(newArr); <br> <br>&nbsp;&nbsp;
+
+              var other = arrMin.filter((e, i, arr) => { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                var la = arrMax.some((j) => { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  console.log(`i == j  ${e} == ${j} : ${e == j}`); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  return e == j; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                });  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                console.log(!la);  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                return !la; <br>&nbsp;&nbsp;
+              });   <br> <br>&nbsp;&nbsp;
+
+              console.log(); <br>&nbsp;&nbsp;
+              // Same, same; but different. <br>&nbsp;&nbsp;
+              return newArr.concat(other); <br>
+            } <br>
+
+            diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]); // [4]<br>
+            diffArray(["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]);  // (2) ["diorite", "pink wool"]
+          </blockquote>
+          <p>Better solution</p>
+          <blockquote>
+            function diffArray(arr1, arr2) { <br> &nbsp;&nbsp;
+              var newArr = []; <br>&nbsp;&nbsp;
+              var ar1, ar2; <br>&nbsp;&nbsp;
+              // Same, same; but different. <br>&nbsp;&nbsp;
+              ar1 = arr1.filter(function (e) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                return !arr2.includes(e); <br>&nbsp;&nbsp;
+              }); <br> <br>&nbsp;&nbsp;
+
+              ar2 = arr2.filter(function (e) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                return !arr1.includes(e); <br>&nbsp;&nbsp;
+              }); <br> <br>&nbsp;&nbsp;
+
+              newArr = newArr.concat(ar2, ar1); <br> <br>&nbsp;&nbsp;
+
+              return newArr; <br>
+            } <br> <br>
+
+            diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]); // [4]<br>
+            diffArray(["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]); // (2) ["diorite", "pink wool"]
+          </blockquote>
+          <blockquote>
+            function diffArray(arr1, arr2) { <br>&nbsp;&nbsp;
+              // Same, same; but different. <br>&nbsp;&nbsp;
+              return arr2 <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                .concat(arr1) <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                .filter(item => !arr1.includes(item) || !arr2.includes(item)); <br>
+            }  <br><br>
+
+            diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]); // [4] <br>
+            diffArray(["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]); // (2) ["diorite", "pink wool"]
+          </blockquote>
+          <blockquote>
+            function diffArray(arr1, arr2) { <br> &nbsp;&nbsp;
+              // Same, same; but different. <br>&nbsp;&nbsp;
+              return arr2 <br> &nbsp;&nbsp;&nbsp;&nbsp;
+                .filter(item => !arr1.includes(item)) <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                .concat(arr1.filter(item => !arr2.includes(item))); <br>
+            } <br> <br>
+
+            diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]); // [4] <br>
+            diffArray(["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]); // (2) ["diorite", "pink wool"]
+          </blockquote>
+          <blockquote>
+            function diffArray(arr1, arr2) { <br> &nbsp;&nbsp;
+              // Same, same; but different. <br>&nbsp;&nbsp;
+              return [...diff(arr2, arr1), ...diff(arr1, arr2)]; <br> <br>&nbsp;&nbsp;
+
+              function diff(ar1,ar2) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                return ar1.filter(item => !ar2.includes(item)); <br>&nbsp;&nbsp;
+              } <br>
+            } <br> <br>
+
+            diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]); // [4] <br>
+            diffArray(["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]); // (2) ["diorite", "pink wool"]
+          </blockquote>
+          <p><a href="file:///Users/oramirez/Documents/proyectos/revi/fcc/js/intermediate-algorithm/exercises/index.html" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="seek-and-destroy" class="main-section">
+        <header>Seek and Destroy</header>
+        <article>
+          <div class="challenge-instructions intermediate-algorithm-scripting col-xs-12">
+            <p class="wrappable">You will be provided with an initial array (the first argument in the destroyer function), followed by one or more arguments. Remove all elements from the initial array that are of the same value as these arguments.
+            </p>
+            <p class="wrappable"><strong>Note</strong><br> You have to use the <code>arguments</code> object.</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Write your own code.</p>
+          </div>
+          <blockquote>
+            function destroyer(arr) { <br>&nbsp;&nbsp;
+              // Remove all the values <br>&nbsp;&nbsp;
+              var arg = arguments; <br>&nbsp;&nbsp;
+              var newArg = []; <br>&nbsp;&nbsp;
+              for (let v in arg) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                if (v != 0) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  // console.log(arg[v]); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  newArg.push(arg[v]); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                } <br>&nbsp;&nbsp;
+              } <br>&nbsp;&nbsp;
+              console.log(newArg); <br>&nbsp;&nbsp;
+              var l = arr.filter(item => !newArg.includes(item)); <br>&nbsp;&nbsp;
+              console.log(l);  <br>&nbsp;&nbsp;
+              return l <br>&nbsp;&nbsp;
+            } <br> <br>
+
+            destroyer([1, 2, 3, 1, 2, 3], 2, 3); // (2) [1, 1]
+          </blockquote>
+          <blockquote>
+            function destroyer(arr) { <br>&nbsp;&nbsp;
+              // Remove all the values <br>&nbsp;&nbsp;
+              var arg = Array.prototype.slice.call(arguments, 1); <br>&nbsp;&nbsp;
+              console.log(arg); <br>&nbsp;&nbsp;
+              return arr.filter(item => !newArg.includes(item)); <br>
+            } <br> <br>
+
+            destroyer([1, 2, 3, 1, 2, 3], 2, 3); // (2) [1, 1]
+          </blockquote>
+          <blockquote>
+            function destroyer(arr, ...arg) { <br> &nbsp;&nbsp;
+              // Remove all the values <br> &nbsp;&nbsp;
+              return arr.filter(item => !arg.includes(item)); <br>
+            } <br> <br>
+
+            destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+          </blockquote>
+          <blockquote>
+            const destroyer = (arr, ...arg) => arr.filter(i => !arg.includes(i));
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/seek-and-destroy" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="wherefore-art-thou" class="main-section">
+        <header>Wherefore art thou</header>
+        <article>
+          <blockquote>
+            function whatIsInAName(collection, source) { <br>&nbsp;&nbsp;
+              // What's in a name? <br>&nbsp;&nbsp;
+              var arr = []; <br>&nbsp;&nbsp;
+              // Only change code below this line <br> <br>&nbsp;&nbsp;
+
+              collection.forEach((v) => { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                console.log(); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                var arrS = []; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                for (var i in v) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  for (var j in source) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    console.log(`i == j ${i} == ${j}`); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    if (i == j) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      console.log(`v[i] == source[j]: ${v[i]} == ${source[j]}`); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      if (v[i] == source[j]) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        arrS.push(true); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      } else { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        arrS.push(false); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      } <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    } <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  } <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                } <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                console.log(`arrS.length: ${arrS.length}`); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                console.log(`Object.keys(arrS).length: ${Object.keys(source).length}`); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                if (arrS.length == Object.keys(source).length && arrS.every(i => i)) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  // console.log('hace el push'); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  arr.push(v); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                } <br>&nbsp;&nbsp;
+              }); <br> <br>&nbsp;&nbsp;
+
+              console.log(arr); <br>&nbsp;&nbsp;
+              // Only change code above this line <br>&nbsp;&nbsp;
+              return arr; <br>
+            } <br> <br>
+
+            whatIsInAName( <br>&nbsp;&nbsp;
+              [{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], <br>&nbsp;&nbsp;
+              { "apple": 1, "bat": 2 } <br>
+            );
+          </blockquote>
+          <blockquote>
+            function whatIsInAName(collection, source) { <br>&nbsp;&nbsp;
+              // What's in a name? <br>&nbsp;&nbsp;
+              var arr = []; <br>&nbsp;&nbsp;
+              // Only change code below this line <br>&nbsp;&nbsp;
+              var arrS = Object.keys(source); <br>&nbsp;&nbsp;
+              // console.log(arrS); <br> <br>&nbsp;&nbsp;
+
+              arr = collection.filter((obj) => { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                console.log(' '); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                console.log(obj); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                for (var i=0; i < arrS.length; i++) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  console.log(`arrS[i]: ${arrS[i]}`); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  console.log(`!obj.hasOwnProperty(${arrS[i]}): ${!obj.hasOwnProperty(arrS[i])}`); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  console.log(`obj[${arrS[i]}] !== arrS[${arrS[i]}]: ${obj[arrS[i]]} !== ${source[arrS[i]]}: ${obj[arrS[i]] !== source[arrS[i]]}`); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  if (!obj.hasOwnProperty(arrS[i]) || obj[arrS[i]] !== source[arrS[i]]) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    return false; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  } <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                }; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                return true; <br>&nbsp;&nbsp;
+              });  <br>&nbsp;&nbsp;
+              console.log(' '); <br>&nbsp;&nbsp;
+              console.log(arr);  <br>&nbsp;&nbsp;
+              // Only change code above this line <br>&nbsp;&nbsp;
+              return arr;  <br>&nbsp;&nbsp;
+            } <br> <br>
+
+            // whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }); <br>
+            whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 });
+          </blockquote>
+          <blockquote>
+            function whatIsInAName(collection, source) { <br>&nbsp;&nbsp;
+              // What's in a name? <br>&nbsp;&nbsp;
+              var arr = []; <br>&nbsp;&nbsp;
+              // Only change code below this line <br>&nbsp;&nbsp;
+              var arrS = Object.keys(source); <br>&nbsp;&nbsp;
+              // console.log(arrS); <br> <br>&nbsp;&nbsp;
+
+              arr = collection.filter((obj) => { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                console.log(' '); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                console.log(obj); <br> <br>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                return arrS.every(i => { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  console.log(`arrS[i]: ${i}`); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  console.log(`obj.hasOwnProperty(${i}): ${obj.hasOwnProperty(i)}`); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  console.log(`obj[${i}] === arrS[${i}]: ${obj[i]} === ${source[i]}: ${obj[i] === source[i]}`); <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  return obj.hasOwnProperty(arrS[i]) || obj[i] === source[i]; <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                }); <br>&nbsp;&nbsp;
+              });  <br>&nbsp;&nbsp;
+              console.log(' '); <br>&nbsp;&nbsp;
+              console.log(arr);  <br>&nbsp;&nbsp;
+              // Only change code above this line <br>&nbsp;&nbsp;
+              return arr;  <br>&nbsp;&nbsp;
+            } <br> <br>
+
+            // whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }); <br>
+            whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 });
+          </blockquote>
+          <blockquote>
+            function whatIsInAName(collection, source) { <br>&nbsp;&nbsp;
+              var arrS = Object.keys(source); <br>&nbsp;&nbsp;
+              return collection.filter((obj) => { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                return arrS.map(i => obj.hasOwnProperty(i) && obj[i] === source[i]).reduce((a, b) => a && b); <br>&nbsp;&nbsp;
+              }); <br>
+            }
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/wherefore-art-thou/" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="spinal-tap-case" class="main-section">
+        <header>Spinal Tap Case</header>
+        <article>
+          <div class="challenge-instructions intermediate-algorithm-scripting col-xs-12">
+            <p class="wrappable">Convert a string to spinal case. Spinal case is all-lowercase-words-joined-by-dashes.</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+          </div>
+          <blockquote>
+            function spinalCase(str) { <br>&nbsp;&nbsp;
+              // "It's such a fine line between stupid, and clever." <br>&nbsp;&nbsp;
+              // --David St. Hubbins <br>&nbsp;&nbsp;
+              var s = str; <br>&nbsp;&nbsp;
+              s = s.replace(/([a-z])([A-Z])/g, '$1 $2');  <br>&nbsp;&nbsp;
+              // console.log('1'); <br>&nbsp;&nbsp;
+              // console.log(s); <br> <br>&nbsp;&nbsp;
+
+              s = s.replace(/<[^>]*>/g, '');  <br>&nbsp;&nbsp;
+              // console.log('2'); <br>&nbsp;&nbsp;
+              // console.log(s); <br> <br>&nbsp;&nbsp;
+
+              s = s.replace(/\s|_/g, '-').toLowerCase(); <br>&nbsp;&nbsp;
+              // console.log('3');  <br>&nbsp;&nbsp;
+              []=console.log(s); <br> <br>&nbsp;&nbsp;
+
+              return s; <br>
+            } <br> <br>
+
+            // spinalCase('This Is Spinal Tap'); <br>
+            spinalCase("thisIsSpinal<wbr>Tap"); // this-is-spinaltap <br>
+            spinalCase("AllThe-small Things"); // all-the-small-things
+          </blockquote>
+          <blockquote>
+            function spinalCase(str) { <br>&nbsp;&nbsp;
+              // "It's such a fine line between stupid, and clever." <br>&nbsp;&nbsp;
+              // --David St. Hubbins <br>&nbsp;&nbsp;
+              return str.replace(/<[^>]*>/, '').split(/\s|_|(?=[A-Z])/).join('-').toLowerCase(); <br>
+            } <br> <br>
+
+            spinalCase("thisIsSpinal<wbr>Tap"); // this-is-spinaltap <br>
+          </blockquote>
+          <p><a href="" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="pig-latin" class="main-section">
+        <header>Pig Latin</header>
+        <article>
+          <div class="challenge-instructions intermediate-algorithm-scripting col-xs-12">
+            <p class="wrappable">Translate the provided string to pig latin.</p>
+            <p class="wrappable"><a href="http://en.wikipedia.org/wiki/Pig_Latin" target="_blank">Pig Latin</a> takes the first consonant (or consonant cluster) of an English word, moves it to the end of the word and suffixes an "ay".</p>
+            <p class="wrappable">If a word begins with a vowel you just add "way" to the end.</p>
+            <p class="wrappable">Input strings are guaranteed to be English words in all lowercase.</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+          </div>
+          <blockquote>
+            function translatePigLatin(str) { <br> &nbsp;&nbsp;
+              return (/^[aeiou]/i).test(str) ?  <br> &nbsp;&nbsp;
+                str + 'way' :  <br> &nbsp;&nbsp;&nbsp;&nbsp;
+                (/[aeiou]/i).test(str) ?  <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  str.replace(/([^aeiou]*)(?=[aeiou])(\w+)/, '$2$1ay') : <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  str + 'ay'; <br>
+            } <br> <br>
+
+            console.log(translatePigLatin("consonant")); // onsonantcay <br>
+            console.log(translatePigLatin("glove")); // oveglay <br>
+            console.log(translatePigLatin("eight")); // eightway <br>
+            console.log(translatePigLatin("ght")) // gthay
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/pig-latin" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="search-and-replace" class="main-section">
+        <header>Search and Replace</header>
+        <article>
+          <div class="challenge-instructions intermediate-algorithm-scripting col-xs-12">
+            <p class="wrappable">Perform a search and replace on the sentence using the arguments provided and return the new sentence.</p>
+            <p class="wrappable">First argument is the sentence to perform the search and replace on.</p>
+            <p class="wrappable">Second argument is the word that you will be replacing (before).</p>
+            <p class="wrappable">Third argument is what you will be replacing the second argument with (after).</p>
+            <p class="wrappable"><strong>Note</strong><br> Preserve the case of the first character in the original word when you are replacing it. For example if you mean to replace the word "Book" with the word "dog", it should be replaced as "Dog"
+            </p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+          </div>
+          <blockquote>
+            function myReplace(str, before, after) { <br>&nbsp;&nbsp;
+              var fr = new RegExp( before , "gi"); <br>&nbsp;&nbsp;
+              // console.log(fr); <br> <br>&nbsp;&nbsp;
+
+              after = (/^[A-Z]/).test(before) ? <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                after.replace(/\b\w/, l => l.toUpperCase()) : <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                after;  <br>&nbsp;&nbsp;
+              // console.log(after); <br> <br>&nbsp;&nbsp;
+
+              var res = str.replace(fr, after);  <br>&nbsp;&nbsp;
+              console.log(res); <br>&nbsp;&nbsp;
+              return res; <br>
+            } <br> <br>
+
+            myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped"); // A quick brown fox leaped over the lazy dog <br>
+            myReplace("He is Sleeping on the couch", "Sleeping", "sitting"); // He is Sitting on the couch
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/search-and-replace" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="dna-pairing" class="main-section">
+        <header>DNA Pairing</header>
+        <article>
+          <div class="challenge-instructions intermediate-algorithm-scripting col-xs-12">
+            <p class="wrappable">The DNA strand is missing the pairing element. Take each character, get its pair, and return the results as a 2d array.</p>
+            <p class="wrappable"><a href="http://en.wikipedia.org/wiki/Base_pair" target="_blank">Base pairs</a> are a pair of AT and CG. Match the missing element to the provided character.</p>
+            <p class="wrappable">Return the provided character as the first element in each array.</p>
+            <p class="wrappable">For example, for the input GCG, return [["G", "C"], ["C","G"],["G", "C"]]</p>
+            <p class="wrappable">The character and its pair are paired up in an array, and all the arrays are grouped into one encapsulating array.</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+          </div>
+          <blockquote>
+            function pairElement(str) { <br> &nbsp;&nbsp;
+              var arr = []; <br> <br> &nbsp;&nbsp;
+
+              function pair (st) { <br> &nbsp;&nbsp; &nbsp;&nbsp;
+                switch(st){ <br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                  case 'A': <br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    arr.push(['A', 'T']); <br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    break; <br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                  case 'T': <br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    arr.push(['T', 'A']); <br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    break; <br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                  case 'G': <br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    arr.push(['G', 'C']); <br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    break; <br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                  case 'C': <br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    arr.push(['C', 'G']); <br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    break; <br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                  default: <br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                    arr.push([]); <br> &nbsp;&nbsp; &nbsp;&nbsp;
+                } <br> &nbsp;&nbsp;
+              } <br> <br> &nbsp;&nbsp;
+
+              for(var i=0; i < str.length; i++) { <br> &nbsp;&nbsp; &nbsp;&nbsp;
+                pair(str[i]); <br> &nbsp;&nbsp;
+              } <br> <br> &nbsp;&nbsp;
+
+              console.log(arr);  <br> &nbsp;&nbsp;
+              return arr; <br> &nbsp;&nbsp;
+            } <br> <br>
+
+            // pairElement("GCG"); <br>
+            pairElement("ATCGA");
+          </blockquote>
+          <blockquote>
+            function pairElement(str) { <br> &nbsp;&nbsp;
+              const pairs = { <br> &nbsp;&nbsp; &nbsp;&nbsp;
+                'A': 'T', <br> &nbsp;&nbsp; &nbsp;&nbsp;
+                'T': 'A', <br> &nbsp;&nbsp; &nbsp;&nbsp;
+                'G': 'C', <br> &nbsp;&nbsp; &nbsp;&nbsp;
+                'C': 'G' <br> &nbsp;&nbsp;
+              } <br> &nbsp;&nbsp;
+              return str.split('').map(x => [x, pairs[x]]); <br>
+            } <br> <br>
+
+            console.log(pairElement("ATCGA")); // ["A", "T"], ["T", "A"],["C", "G"], ["G", "C"], ["A", "T"]
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/dna-pairing" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="missing-letters" class="main-section">
+        <header>Missing letters</header>
+        <article>
+          <div class="challenge-instructions intermediate-algorithm-scripting col-xs-12">
+            <p class="wrappable">Find the missing letter in the passed letter range and return it.</p>
+            <p class="wrappable">If all letters are present in the range, return undefined.</p>
+            <p class="wrappable">Remember to use <a href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514" target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+          </div>
+          <blockquote>
+            function fearNotLetter(str) { <br> &nbsp;&nbsp;
+              var al = 'abcdefghijklmnopqrstuvwxyz'.split(''); <br> &nbsp;&nbsp;
+              console.log(al); <br> &nbsp;&nbsp;
+              var st = al.indexOf(str[0]); <br> &nbsp;&nbsp;
+              console.log(`st: ${st}: ${al[st]}`); <br> &nbsp;&nbsp;
+              console.log(`st + str.length: ${st + str.length}`); <br> &nbsp;&nbsp;
+              for (let i=0; i < str.length; i++) { <br> &nbsp;&nbsp; &nbsp;&nbsp;
+                console.log(`str[${i}] != al[${i + st}]: ${str[i]} != ${al[i + st]}: ${str[i] != al[i + st]} `) <br> &nbsp;&nbsp; &nbsp;&nbsp;
+                if (str[i] != al[i + st]) { <br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                  console.log(al[i + st]); <br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                  return al[i + st]; <br> &nbsp;&nbsp; &nbsp;&nbsp;
+                } <br> &nbsp;&nbsp;
+              } <br> <br> &nbsp;&nbsp;
+
+              return; <br>
+            } <br> <br>
+
+            // fearNotLetter("abce"); <br>
+            fearNotLetter("stvwx");
+          </blockquote>
+          <blockquote>
+            function fearNotLetter(str) { <br> &nbsp;&nbsp;
+              for(var i=0; i < str.length; i++) { <br> &nbsp;&nbsp; &nbsp;&nbsp;
+                var code = str.charCodeAt(i); <br> &nbsp;&nbsp; &nbsp;&nbsp;
+                if (code != str.charCodeAt(0) + i) { <br> &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                  return String.fromCharCode(code - 1); <br> &nbsp;&nbsp; &nbsp;&nbsp;
+                } <br> &nbsp;&nbsp;
+              } <br> &nbsp;&nbsp;
+              return undefined; <br>
+            } <br> <br>
+
+            fearNotLetter("abce");
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/missing-letters" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="sorted-union" class="main-section">
+        <header>Sorted Union</header>
+        <div class="challenge-instructions intermediate-algorithm-scripting col-xs-12">
+          <p class="wrappable">Write a function that takes two or more arrays and returns a new array of unique values
+            in the order of the original provided arrays.</p>
+          <p class="wrappable">In other words, all values present from all arrays should be included in their original
+            order, but with no duplicates in the final array.</p>
+          <p class="wrappable">The unique numbers should be sorted by their original order, but the final array should
+            not be sorted in numerical order.</p>
+          <p class="wrappable">Check the assertion tests for examples.</p>
+          <p class="wrappable">Remember to use <a
+              href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514"
+              target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+        </div>
+        <article>
+          <blockquote>
+            function uniteUnique(arr, ...arg) { <br> &nbsp; &nbsp;
+              var l = (arg); <br> &nbsp; &nbsp;
+              for (var i = 0; i < arg.length; i++) { <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                l[i].map(i => { <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  if (arr.indexOf(i) === -1) { <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    arr.push(i); <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  } <br> &nbsp; &nbsp;
+                }); <br> &nbsp; &nbsp;
+              } <br> &nbsp; &nbsp;
+              return arr; <br>
+            } <br> <br>
+            
+            uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/sorted-union/" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="convert-html-entities" class="main-section">
+        <header>Convert HTML Entities</header>
+        <article>
+          <div class="challenge-instructions intermediate-algorithm-scripting col-xs-12">
+            <p class="wrappable">Convert the characters <code>&amp;</code>, <code>&lt;</code>, <code>&gt;</code>,
+              <code>"</code> (double quote), and <code>'</code> (apostrophe), in a string to their corresponding HTML
+              entities.</p>
+            <p class="wrappable">Remember to use <a
+                href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514"
+                target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+          </div>
+          <blockquote>
+            function convertHTML(str) { <br> &nbsp; &nbsp;
+              // &colon;&rpar; <br> &nbsp; &nbsp;
+              var s = str.split('').map(i => { <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                console.log(`i: ${i}`);     <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                if (i === '<') { return '&lt;'}; <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                if (i === '>') { return '&gt;'}; <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                if (i === '&') { return '&amp;'}; <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                if (i === '"') { return '&quot;'}; <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                if (i === "'") { return '&apos;'}; <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                return i; <br> &nbsp; &nbsp;
+              }).join(''); <br> &nbsp; &nbsp;
+              console.log(s); <br> &nbsp; &nbsp;
+              return s; <br>
+            } <br> <br>
+            
+            convertHTML("Dolce & Gabbana"); <br>
+            convertHTML("<>&'");
+          </blockquote>
+          <blockquote>
+              function convertHTML(str) { <br> &nbsp; &nbsp;
+                var htmlEntities = { <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  "&": "&amp;", <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  "<": "&lt;", <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  ">": "&gt;", <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  '"': "&quot;", <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  "'": "&apos;" <br> &nbsp; &nbsp;
+                } <br> &nbsp; &nbsp;
+                return str.split('').map(i => htmlEntities[i] || i).join(''); <br>
+              } <br> <br>
+              
+              convertHTML("Dolce & Gabbana");
+          </blockquote>
+          <p><a href="" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="sum-all-odd-fibonacci-numbers" class="main-section">
+        <header>Sum All Odd Fibonacci Numbers</header>
+        <article>
+          <div class="challenge-instructions intermediate-algorithm-scripting col-xs-12">
+            <p class="wrappable">Given a positive integer <code>num</code>, return the sum of all odd Fibonacci
+              numbers that are less than or equal to <code>num</code>.</p>
+            <p class="wrappable">The first two numbers in the Fibonacci sequence are 1 and 1. Every additional number
+              in the sequence is the sum of the two previous numbers. The first six numbers of the Fibonacci sequence
+              are 1, 1, 2, 3, 5 and 8.</p>
+            <p class="wrappable">For example, <code>sumFibs(10)</code> should return <code>10</code> because all odd
+              Fibonacci numbers less than or equal to <code>10</code> are 1, 1, 3, and 5.</p>
+            <p class="wrappable">Remember to use <a
+                href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514"
+                target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+          </div>
+          <blockquote>
+              function sumFibs(num) { <br> &nbsp; &nbsp;
+                if (num < 0) { return -1; } <br> &nbsp; &nbsp;
+                if (num === 1 || 0) { return 1; } <br> &nbsp; &nbsp;
+                var y = 1; <br> &nbsp; &nbsp;
+                var n = 1; <br> &nbsp; &nbsp;
+                var sum = 1; <br> &nbsp; &nbsp;
+                // console.log(num); <br> &nbsp; &nbsp;
+                for(n; n <= num;) {  <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  // console.log(`n = y + n: ${n} + ${y} = ${n + y}`); <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  // console.log(`y = n - y: ${n} - ${y} = ${n - y}`); <br> <br> &nbsp; &nbsp; &nbsp; &nbsp;
+              
+                  if (n % 2 != 0) { sum += n; } <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  n = y + n; <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  y = n - y; <br> <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  
+                  // console.log(`n: ${n}`); <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  // console.log(`y: ${y}`); <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  // console.log(`sum: ${sum}`); <br> &nbsp; &nbsp;
+                } <br> &nbsp; &nbsp;
+                return sum; <br>
+              } <br> <br>
+              
+              console.log(sumFibs(1000));
+          </blockquote>
+          <blockquote>
+              function sumFibs(num) { <br> &nbsp; &nbsp;
+                if (num < 0) { return -1; } <br> &nbsp; &nbsp;
+                if (num === 1 || 0) { return 1; } <br> &nbsp; &nbsp;
+                var fib = [1,1]; <br> &nbsp; &nbsp;
+                var nextFib = 0; <br> &nbsp; &nbsp;
+                while ((nextFib = fib[0] + fib[1]) <= num ) { <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  fib.unshift(nextFib); <br> &nbsp; &nbsp;
+                } <br> &nbsp; &nbsp;
+                return fib.reduce((acc, cur) => { <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  return acc + cur * (cur % 2); <br> &nbsp; &nbsp;
+                }); <br>
+              } <br> <br>
+              
+              console.log(sumFibs(4000000));
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/sum-all-odd-fibonacci-numbers" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="sum-all-primes" class="main-section">
+        <header>Sum All Primes</header>
+        <article>
+          <div class="challenge-instructions intermediate-algorithm-scripting col-xs-12">
+            <p class="wrappable">Sum all the prime numbers up to and including the provided number.</p>
+            <p class="wrappable">A prime number is defined as a number greater than one and having only two divisors,
+              one and itself. For example, 2 is a prime number because it's only divisible by one and two.</p>
+            <p class="wrappable">The provided number may not be a prime.</p>
+            <p class="wrappable">Remember to use <a
+                href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514"
+                target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+          </div>
+          <blockquote>
+              function sumPrimes(num) { <br> &nbsp; &nbsp;
+                var com = [2,3,5,7,11]; <br> &nbsp; &nbsp;
+                var suma = 0; <br> &nbsp; &nbsp;
+                for (var i = 0; i <= num; i++) { <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  if (i < 12) { <br></12> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    var h = com.some(n => i == n); <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    // console.log(`${i} h: ${h}`); <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    if (h) { suma += i; } <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  } else { <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    var j = com.every(n => i % n != 0); <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    // console.log(`${i} j: ${j}`); <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    if (j) {  <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                      com.push(i); <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                      suma += i;  <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    } <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  } <br> &nbsp; &nbsp;
+                } <br> &nbsp; &nbsp;
+                console.log(`suma: ${suma}`); <br> &nbsp; &nbsp;
+                return suma; <br>
+              } <br> <br>
+              
+              sumPrimes(977); // 73156
+          </blockquote>
+          <blockquote>
+              function sumPrimes(num) { <br> &nbsp; &nbsp;
+                var com = [];  <br> &nbsp; &nbsp;
+                var suma = 0;  <br> &nbsp; &nbsp;
+                for (var i = 2; i <= num; i++) { <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  if (com.every(n => i % n != 0)) {  <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    com.push(i);  <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    suma += i;  <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                  } <br> &nbsp; &nbsp;
+                }  <br> &nbsp; &nbsp;
+                console.log(`suma: ${suma}`);  <br> &nbsp; &nbsp;
+                return suma;  <br>
+              }  <br> <br>
+              
+              sumPrimes(977); // 73156
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/sum-all-primes" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="smallest-common-multiple" class="main-section">
+        <header>Smallest Common Multiple</header>
+        <article>
+          <div class="challenge-instructions intermediate-algorithm-scripting col-xs-12">
+            <p class="wrappable">Find the smallest common multiple of the provided parameters that can be evenly
+              divided by both, as well as by all sequential numbers in the range between these parameters.</p>
+            <p class="wrappable">The range will be an array of two numbers that will not necessarily be in numerical
+              order.</p>
+            <p class="wrappable">For example, if given 1 and 3, find the smallest common multiple of both 1 and 3 that
+              is also evenly divisible by all numbers <em>between</em> 1 and 3. The answer here would be 6.</p>
+            <p class="wrappable">Remember to use <a
+                href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514"
+                target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+          </div>
+          <blockquote>
+            function mcm(arr) { <br> &nbsp;&nbsp;
+              arr.sort((a, b) => a - b); <br> <br> &nbsp;&nbsp;
+            
+              let min = arr[0]; <br> &nbsp;&nbsp;
+              let max = arr[1]; <br> &nbsp;&nbsp;
+              let minComMul = lcm(min, min + 1); <br> <br> &nbsp;&nbsp;
+            
+              while ( min < max) { <br></max> &nbsp;&nbsp; &nbsp;&nbsp;
+                min++; <br> &nbsp;&nbsp; &nbsp;&nbsp;
+                minComMul = lcm(minComMul, min); <br> &nbsp;&nbsp;
+              } <br> <br> &nbsp;&nbsp;
+            
+              return minComMul; <br> &nbsp;&nbsp;
+            } <br> <br>
+            
+            /** Encuentra al minimo comun multiplo <br>
+             * a = menor numero <br>
+             * b = mayor numero <br>
+             */ <br>
+            function lcm(a, b) { <br> &nbsp;&nbsp;
+              return (a * b / gcd(a, b)); <br>
+            } <br> <br>
+            
+            /** Grather comun divisor <br>
+             * a = minicon multiplo anterior <br>
+             * b = entra como minimo y sera conviertiendo en <br>
+             *      el modulo de temp % b en un numero primo <br>
+             */ <br>
+            function gcd(a, b) { <br> &nbsp;&nbsp;
+              while (b > 0) { <br> &nbsp;&nbsp; &nbsp;&nbsp;
+                let temp = a; <br> &nbsp;&nbsp; &nbsp;&nbsp;
+                a = b; <br> &nbsp;&nbsp; &nbsp;&nbsp;
+                b = temp % b; <br> &nbsp;&nbsp;
+              } <br> &nbsp;&nbsp;
+              return a; <br>
+            } <br> <br>
+            
+            mcm([18,25]);
+          </blockquote>
+          <p><a href="" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="drop-it" class="main-section">
+        <header>Drop it</header>
+        <article>
+          <div class="challenge-instructions intermediate-algorithm-scripting col-xs-12">
+            <p class="wrappable">Given the array <code>arr</code>, iterate through and remove each element starting
+              from the first element (the 0 index) until the function <code>func</code> returns <code>true</code> when
+              the iterated element is passed through it.</p>
+            <p class="wrappable">Then return the rest of the array once the condition is satisfied, otherwise,
+              <code>arr</code> should be returned as an empty array.</p>
+            <p class="wrappable">Remember to use <a
+                href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514"
+                target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+          </div>
+          <blockquote>
+            function dropElements(arr, func) { <br> &nbsp; &nbsp;
+              // Drop them elements. <br> &nbsp;
+              let newArr = []; <br> <br> &nbsp;
+            
+              arr.map((n, i) => { <br> &nbsp;
+                if(func(n)) { <br> &nbsp; &nbsp;
+                  newArr = newArr.length > 0 ? newArr : arr.slice(i); <br> &nbsp;
+                  } <br> &nbsp;
+              }); <br> &nbsp;
+              return newArr;  <br>
+            } <br> <br>
+            
+            // dropElements([1, 2, 3], function(n) { <br>
+            //   console.log(`n = ${n}`); <br>
+            //   return n < 3;  <br></3>
+            // }); <br> <br>
+            
+            dropElements([0, 1, 0, 1], function(n) { <br> &nbsp;
+              // console.log(`n === 1 ? `); <br> &nbsp;
+              console.log(`${n} === 1 ? `); <br> &nbsp;
+              return n === 1; <br>
+              })
+          </blockquote>
+          <p><a href="" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="steamroller" class="main-section">
+        <header>Steamroller</header>
+        <article>
+          <p class="wrappable">Flatten a nested array. You must account for varying levels of nesting.</p>
+          <blockquote>
+            function steamrollArray(arr) { <br> &nbsp;
+              // I'm a steamroller, baby <br> <br> &nbsp;
+            
+              let newArr = []; <br> <br> &nbsp;
+            
+              let prueba = function (arg) { <br> &nbsp; &nbsp;
+                if (!Array.isArray(arg)) { <br> &nbsp; &nbsp; &nbsp;
+                  newArr.push(arg); <br> &nbsp; &nbsp;
+                } else { <br> &nbsp; &nbsp; &nbsp;
+                  for (let a in arg) { <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                    prueba(arg[a]); <br> &nbsp; &nbsp; &nbsp;
+                  } <br> &nbsp; &nbsp;
+                } <br> &nbsp;
+              } <br> <br> &nbsp;
+              
+              arr.forEach(prueba); <br> &nbsp;
+              return newArr; <br>
+            } <br> <br>
+            
+            steamrollArray([1, [2], [3, [[4]]]]);
+          </blockquote>
+          <blockquote>
+            function steamrollArray(arr) { <br> &nbsp;
+              return arr.toString() <br> &nbsp; &nbsp;
+                .replace(',,', ',')       // "1,2,,3" => "1,2,3" <br> &nbsp; &nbsp;
+                .split(',')               // ['1','2','3'] <br> &nbsp; &nbsp;
+                .map(function(v) { <br> &nbsp; &nbsp; &nbsp;
+                  if (v == '[object Object]') { // bring back empty objects <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                    return {}; <br> &nbsp; &nbsp; &nbsp;
+                  } else if (isNaN(v)) {        // if not a number (string) <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    return v; <br> &nbsp; &nbsp; &nbsp;
+                  } else { <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                    return parseInt(v);         // if a number in a string, convert it <br> &nbsp; &nbsp; &nbsp;
+                  } <br> &nbsp; &nbsp;
+                }); <br>
+            }
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/steamroller" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="binary-agents" class="main-section">
+        <header>Binary Agents</header>
+        <article>
+          <p class="wrappable">Return an English translated sentence of the passed binary string.</p>
+          <p class="wrappable">The binary string will be space separated.</p>
+          <blockquote>
+            function binaryAgent(str) { <br> &nbsp;
+              return String.fromCharCode(...str.split(' ').map(n => parseInt(n, 2))); <br>
+            } <br> <br>
+            
+            binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111"); <br> <br>
+            
+            function StringAgent(str) { <br> &nbsp;
+              return str.split('').map(n => n.charCodeAt(n).toString(2)).join(' '); <br>
+            } <br> <br>
+            
+            StringAgent('prueba con espacios!*');
+          </blockquote>
+          <p><a href="" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+      
+      <section id="everything-be-true" class="main-section">
+        <header>Everything Be True</header>
+        <article>
+          <div class="challenge-instructions intermediate-algorithm-scripting col-xs-12">
+            <p class="wrappable">Check if the predicate (second argument) is <dfn>truthy</dfn> on all elements of a
+              collection (first argument).</p>
+            <p class="wrappable">In other words, you are given an array collection of objects. The predicate
+              <code>pre</code> will be an object property and you need to return <code>true</code> if its value is
+              <code>truthy</code>. Otherwise, return <code>false</code>.</p>
+            <p class="wrappable">In JavaScript, <code>truthy</code> values are values that translate to
+              <code>true</code> when evaluated in a Boolean context.</p>
+            <p class="wrappable">Remember, you can access object properties through either dot notation or
+              <code>[]</code> notation.</p>
+            <p class="wrappable">Remember to use <a
+                href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514"
+                target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+          </div>
+          <blockquote>
+              function truthCheck(collection, pre) { <br> &nbsp;
+                // Is everyone being true? <br> &nbsp;
+                return collection.every(n => n[pre] ? true : false ); <br>
+              } <br> <br>
+              
+              truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");              
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/everything-be-true" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="arguments-optional" class="main-section">
+        <header>Arguments Optional</header>
+        <article>
+          <div class="challenge-instructions intermediate-algorithm-scripting col-xs-12">
+            <p class="wrappable">Create a function that sums two arguments together. If only one argument is provided,
+              then return a function that expects one argument and returns the sum.</p>
+            <p class="wrappable">For example, <code>addTogether(2, 3)</code> should return <code>5</code>, and
+              <code>addTogether(2)</code> should return a function.</p>
+            <p class="wrappable">Calling this returned function with a single argument will then return the sum:</p>
+            <p class="wrappable"><code>var sumTwoAnd = addTogether(2);</code></p>
+            <p class="wrappable"><code>sumTwoAnd(3)</code> returns <code>5</code>.</p>
+            <p class="wrappable">If either argument isn't a valid number, return undefined.</p>
+            <p class="wrappable">Remember to use <a
+                href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514"
+                target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+          </div>
+          <blockquote>
+              function addTogether() { <br> &nbsp;
+                var checkNumber = (num) => { <br> &nbsp; &nbsp;
+                  // console.log(`type of = ${typeof num}`); <br> &nbsp; &nbsp;
+                  if (typeof num !== 'number' || num === 'undefined') { <br> &nbsp; &nbsp; &nbsp;
+                    console.log(` checkNumber:  typeof ${num} = ${typeof num}`); <br> &nbsp; &nbsp; &nbsp;
+                    return false; <br> &nbsp; &nbsp;
+                  } else { <br> &nbsp; &nbsp; &nbsp;
+                    return true; <br> &nbsp; &nbsp;
+                  } <br> &nbsp;
+                } <br> <br>
+                
+                const len = Object.values(arguments).length; <br> <br> &nbsp;
+              
+                if (len > 1) { <br> &nbsp; &nbsp;
+                  console.log('aqui'); <br> &nbsp; &nbsp;
+                  return Object.values(arguments) <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                          .every(n => checkNumber(n)) ? <br> &nbsp; &nbsp; &nbsp;
+                          Object.values(arguments).reduce((a, b) => a + b) : undefined; <br> &nbsp;
+                } else if (len == 1) { <br> &nbsp; &nbsp;
+                  let temp = Object.values(arguments)[0]; <br> &nbsp; &nbsp;
+                  if (checkNumber(temp)) { <br> &nbsp; &nbsp; &nbsp;
+                    return function (arg) { <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                      if (checkNumber(temp) && checkNumber(arg)) { <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        return temp += arg; <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                      } else { <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        console.log(`${temp} + ${arg} X arg no es un numero`); <br> &nbsp; &nbsp;
+                        return undefined; <br> &nbsp; &nbsp; &nbsp; &nbsp;
+                      } <br> &nbsp; &nbsp; &nbsp;
+                    }; <br> &nbsp; &nbsp;
+                  } else {  <br> &nbsp; &nbsp; &nbsp;
+                    return undefined; <br> &nbsp; &nbsp;
+                  } <br> &nbsp;
+                } else { <br> &nbsp; &nbsp;
+                  return undefined; <br> &nbsp;
+                } <br>
+              } <br> <br>
+              
+              addTogether("http://bit.ly/IqT6zt"); 
+          </blockquote>
+          <blockquote>
+
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/arguments-optional" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="make-a-person" class="main-section">
+        <header>Make a Person</header>
+        <article>
+          <div class="challenge-instructions intermediate-algorithm-scripting col-xs-12">
+            <p class="wrappable">Fill in the object constructor with the following methods below:</p>
+            <div>
+              <blockquote>getFirstName()
+                getLastName()
+                getFullName()
+                setFirstName(first)
+                setLastName(last)
+                setFullName(firstAndLast)</blockquote>
+            </div>
+            <p class="wrappable">Run the tests to see the expected output for each method.</p>
+            <p class="wrappable">The methods that take an argument must accept only one argument and it has to be a
+              string.</p>
+            <p class="wrappable">These methods must be the only available means of interacting with the object.</p>
+            <p class="wrappable">Remember to use <a
+                href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514"
+                target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+          </div>
+          <blockquote>
+            var Person = function(firstAndLast) { <br> &nbsp;
+              // Complete the method below and implement the others similarly <br> &nbsp;
+              let fullName = firstAndLast; <br> &nbsp;
+              this.getFirstName = function() { <br> &nbsp; &nbsp;
+                return fullName.split(' ')[0]; <br> &nbsp;
+              }; <br> <br> &nbsp;
+            
+              this.getLastName = function() { <br> &nbsp; &nbsp;
+                return fullName.split(' ')[1]; <br> &nbsp;
+              }; <br> <br> &nbsp;
+            
+              this.getFullName = function() { <br> &nbsp; &nbsp;
+                return fullName; <br> &nbsp;
+              }; <br> <br> &nbsp;
+            
+              this.setFirstName = function(name) { <br> &nbsp; &nbsp;
+                fullName = name + ' ' + fullName.split(' ')[1]; <br> &nbsp;
+              }; <br> <br> &nbsp;
+            
+              this.setLastName = function(last) { <br> &nbsp; &nbsp;
+                fullName = fullName.split(' ')[0] + ' ' + last; <br> &nbsp;
+              }; <br> <br> &nbsp;
+            
+              this.setFullName = function(full) { <br> &nbsp; &nbsp;
+                fullName = full; <br> &nbsp;
+              }; <br> <br> &nbsp;
+            
+              return firstAndLast; <br>
+            }; <br> <br>
+            
+            var bob = new Person('Bob Ross'); <br>
+            bob.getFullName(); 
+          </blockquote>
+          <p><a href="" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="map-the-debris" class="main-section">
+        <header>Map the Debris</header>
+        <article>
+          <div class="challenge-instructions intermediate-algorithm-scripting col-xs-12">
+            <p class="wrappable">Return a new array that transforms the elements' average altitude into their orbital
+              periods (in seconds).</p>
+            <p class="wrappable">The array will contain objects in the format <code>{name: 'name', avgAlt:
+                avgAlt}</code>.</p>
+            <p class="wrappable">You can read about orbital periods <a
+                href="http://en.wikipedia.org/wiki/Orbital_period" target="_blank">on Wikipedia</a>.</p>
+            <p class="wrappable">The values should be rounded to the nearest whole number. The body being orbited is
+              Earth.</p>
+            <p class="wrappable">The radius of the earth is 6367.4447 kilometers, and the GM value of earth is
+              398600.4418 km<sup>3</sup>s<sup>-2</sup>.</p>
+            <p class="wrappable">Remember to use <a
+                href="http://forum.freecodecamp.org/t/how-to-get-help-when-you-are-stuck/19514"
+                target="_blank">Read-Search-Ask</a> if you get stuck. Try to pair program. Write your own code.</p>
+          </div>
+          <blockquote>
+              function orbitalPeriod(arr) { <br> &nbsp;
+                var GM = 398600.4418; <br> &nbsp;
+                var earthRadius = 6367.4447; <br> &nbsp;
+                var newArr = []; <br> &nbsp;
+                console.log(newArr); <br> &nbsp;
+                for (var i = 0; i < arr.length; i++) { <br></arr.length> &nbsp; &nbsp;
+                  var result = Math.round(2 * Math.PI * Math.sqrt(Math.pow(earthRadius + arr[i].avgAlt, 3) / GM)); <br> &nbsp; &nbsp;
+                  newArr.push({name: arr[i].name, orbitalPeriod: result}); <br> &nbsp;
+                } <br> &nbsp;
+                return newArr; <br>
+              }  <br> <br>
+              
+              orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]);
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/intermediate-algorithm-scripting/map-the-debris" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      
+
+    </main>
+    <script type="text/javascript" src="../js/scripts.js"></script>
+  </body>
+</html>
+ <br>

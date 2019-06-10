@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Excercices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+  </head>
+  <body>
+
+    <nav id="navbar">
+      <header>
+        Excercices
+      </header>
+      <ul>
+        <li class="container-nav-li"><a class="nav-link" href="#Introdution" rel="internal">Introdution</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Learn-About-Functional-Programming" rel="internal">Learn About Functional Programming</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Understand-Functional-Programming-Terminology" rel="internal">Understand Functional Programming Terminology</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Understand-the-Hazards-of-Using-Imperative-Code" rel="internal">Understand the Hazards of Using Imperative Code</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Avoid-Mutations-and-Side-Effects-Using-Functional-Programming" rel="internal">Avoid Mutations and Side Effects Using Functional Programming</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Pass-Arguments-to-Avoid-External-Dependence-in-a-Function" rel="internal">Pass Arguments to Avoid External Dependence in a Function</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Refactor-Global-Variables-Out-of-Functions" rel="internal">Refactor Global Variables Out of Functions</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Use-the-map-Method-to-Extract-Data-from-an-Array" rel="internal">Use the map Method to Extract Data from an Array</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Implement-map-on-a-Prototype" rel="internal">Implement map on a Prototype</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Use-the-filter-Method-to-Extract-Data-from-an-Array" rel="internal">Use the filter Method to Extract Data from an Array</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Implement-the-filter-Method-on-a-Prototype" rel="internal">Implement the filter Method on a Prototype</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Return-Part-of-an-Array-Using-the-slice-Method" rel="internal">Return Part of an Array Using the slice Method</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Remove-Elements-from-an-Array-Using-slice-Instead-of-splice" rel="internal">Remove Elements from an Array Using slice Instead of splice</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Combine-Two-Arrays-Using-the-concat-Method" rel="internal">Combine Two Arrays Using the concat Method</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Add-Elements-to-the-End-of-an-Array-Using-concat-Instead-of-push" rel="internal">Add Elements to the End of an Array Using concat Instead of push</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Use-the-reduce-Method-to-Analyze-Data" rel="internal">Use the reduce Method to Analyze Data</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Sort-an-Array-Alphabetically-using-the-sort-Method" rel="internal">Sort an Array Alphabetically using the sort Method</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Return-a-Sorted-Array-Without-Changing-the-Original-Array" rel="internal">Return a Sorted Array Without Changing the Original Array</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Split-a-String-into-an-Array-Using-the-split-Method" rel="internal">Split a String into an Array Using the split Method</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Combine-an-Array-into-a-String-Using-the-join-Method" rel="internal">Combine an Array into a String Using the join Method</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Apply-Functional-Programming-to-Convert-Strings-to-URL-Slugs" rel="internal">Apply Functional Programming to Convert Strings to URL Slugs</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Use-the-every-Method-to-Check-that-Every-Element-in-an-Array-Meets-a-Criteria" rel="internal">Use the every Method to Check that Every Element in an Array Meets a Criteria</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Use-the-some-Method-to-Check-that-Any-Elements-in-an-Array-Meet-a-Criteria" rel="internal">Use the some Method to Check that Any Elements in an Array Meet a Criteria</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Introduction-to-Currying-and-Partial-Application" rel="internal">Introduction to Currying and Partial Application</a></li>
+      </ul>
+      <div class="nav-mobile"> Menu </div>
+    </nav>
+
+    <main id="main-doc">
+      <!--
+        <p><a href="" target="_blank">reference fcc, click here.</a></p>
+      -->
+
+      <section id="Introdution" class="main-section">
+        <header>Introdution</header>
+        <article>
+          <p>
+            Esta es una documentacion de los ejercicios que mas me llamaron la atencion en FCC.
+          </p>
+        </article>
+      </section>
+
+      <section id="Learn-About-Functional-Programming" class="main-section">
+        <header>Learn About Functional Programming</header>
+        <article>
+          <p class="wrappable">The members of freeCodeCamp happen to love tea.</p>
+          <p class="wrappable">In the code editor, the <code>prepareTea</code> and <code>getTea</code> functions are already defined for you. Call the <code>getTea</code> function to get 40 cups of tea for the team, and store them in the <code>tea4TeamFCC</code> variable.</p>
+          <blockquote>
+            /** <br>&nbsp;
+             * A long process to prepare tea. <br>&nbsp;
+             * @return {string} A cup of tea. <br>
+             **/ <br>
+            const prepareTea = () => 'greenTea'; <br> <br>
+
+            /** <br>&nbsp;
+             * Get given number of cups of tea. <br>&nbsp;
+             * @param {number} numOfCups Number of required cups of tea. <br>&nbsp;
+             * @return {Array<string>} Given amount of tea cups. <br>
+             **/ <br>
+            const getTea = (numOfCups) => { <br>&nbsp;&nbsp;
+              const teaCups = []; <br> <br>&nbsp;&nbsp;
+
+              for(let cups = 1; cups <= numOfCups; cups += 1) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                const teaCup = prepareTea(); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                teaCups.push(teaCup); <br>&nbsp;&nbsp;
+              } <br> <br>&nbsp;&nbsp;
+
+              return teaCups; <br>
+            }; <br> <br>
+
+            // Add your code below this line <br> <br>
+
+            const tea4TeamFCC = getTea(40); // :( <br> <br>
+
+            // Add your code above this line <br> <br>
+
+            console.log(tea4TeamFCC);
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/learn-about-functional-programming" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Understand-Functional-Programming-Terminology" class="main-section">
+        <header>Understand Functional Programming Terminology</header>
+        <article>
+          <p class="wrappable">Prepare 27 cups of green tea and 13 cups of black tea and store them in <code>tea4GreenTeamFCC</code> and <code>tea4BlackTeamFCC</code> variables, respectively. Note that the <code>getTea</code> function has been
+            modified so it now takes a function as the first argument.</p>
+          <p class="wrappable">Note: The data (the number of cups of tea) is supplied as the last argument. We'll discuss this more in later lessons.</p>
+          <blockquote>
+            /** <br>&nbsp;
+             * A long process to prepare green tea. <br>&nbsp;
+             * @return {string} A cup of green tea. <br>
+            **/ <br>
+            const prepareGreenTea = () => 'greenTea'; <br> <br>
+
+            /** <br>&nbsp;
+             * A long process to prepare black tea. <br>&nbsp;
+             * @return {string} A cup of black tea. <br>
+            **/ <br>
+            const prepareBlackTea = () => 'blackTea'; <br> <br>
+
+            /** <br>&nbsp;
+             * Get given number of cups of tea. <br>&nbsp;
+             * @param {function():string} prepareTea The type of tea preparing function. <br>&nbsp;
+             * @param {number} numOfCups Number of required cups of tea. <br>&nbsp;
+             * @return {Array<string>} Given amount of tea cups. <br>
+            **/ <br>
+            const getTea = (prepareTea, numOfCups) => { <br>&nbsp;&nbsp;
+              const teaCups = []; <br> <br>&nbsp;&nbsp;
+
+              for(let cups = 1; cups <= numOfCups; cups += 1) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                const teaCup = prepareTea(); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                teaCups.push(teaCup); <br>&nbsp;&nbsp;
+              } <br> <br>&nbsp;&nbsp;
+
+              return teaCups; <br>
+            }; <br> <br>
+
+            // Add your code below this line <br> <br>
+
+            const tea4GreenTeamFCC = getTea(prepareGreenTea, 27); // :( <br>
+            const tea4BlackTeamFCC = getTea(prepareBlackTea, 13); // :( <br> <br>
+
+            // Add your code above this line <br> <br>
+
+            console.log( <br>&nbsp;&nbsp;
+              tea4GreenTeamFCC, <br>&nbsp;&nbsp;
+              tea4BlackTeamFCC <br>
+            );
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/understand-functional-programming-terminology" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Understand-the-Hazards-of-Using-Imperative-Code" class="main-section">
+        <header>Understand the Hazards of Using Imperative Code</header>
+        <p class="wrappable">Run the code in the editor. It's using a method that has side effects in the program, causing incorrect output. The final list of open tabs should be <code>['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium', 'new tab', 'Netflix', 'YouTube', 'Vine', 'GMail', 'Work mail', 'Docs', 'freeCodeCamp', 'new tab']</code> but the output will be slightly different.</p>
+        <p class="wrappable">Work through the code and see if you can figure out the problem, then advance to the next challenge to learn more.</p>
+        <article>
+          <blockquote>
+            // tabs is an array of titles of each site open within the window <br>
+            var Window = function(tabs) { <br>&nbsp;&nbsp;
+              this.tabs = tabs; // we keep a record of the array inside the object <br>
+            }; <br> <br>
+
+            // When you join two windows into one window <br>
+            Window.prototype.join = function (otherWindow) { <br>&nbsp;&nbsp;
+              this.tabs = this.tabs.concat(otherWindow.tabs); <br>&nbsp;&nbsp;
+              return this; <br>
+            }; <br> <br>
+
+            // When you open a new tab at the end <br>
+            Window.prototype.tabOpen = function (tab) { <br>&nbsp;&nbsp;
+              this.tabs.push('new tab'); // let's open a new tab for now <br>&nbsp;&nbsp;
+              return this; <br>
+            }; <br> <br>
+
+            // When you close a tab <br>
+            Window.prototype.tabClose = function (index) { <br>&nbsp;&nbsp;
+              var preventTabs = this.tabs; <br>&nbsp;&nbsp;
+              // console.log(`preventTabs: ${preventTabs}`); <br>&nbsp;&nbsp;
+              var tabsBeforeIndex = preventTabs.slice(0, index); // get the tabs before the tab // splice used before<br>&nbsp;&nbsp;
+              // console.log(`tabsBeforeIndex: ${tabsBeforeIndex}`); <br>&nbsp;&nbsp;
+              var preventTabs = this.tabs; <br>&nbsp;&nbsp;
+              // console.log(`preventTabs: ${preventTabs}`);  <br>&nbsp;&nbsp;
+              var tabsAfterIndex = preventTabs.slice(index + 1); // get the tabs after the tab // splice used before<br>&nbsp;&nbsp;
+              // console.log(`tabsAfterIndex: ${tabsAfterIndex}`);  <br>&nbsp;&nbsp;
+              this.tabs = tabsBeforeIndex.concat(tabsAfterIndex); // join them together  <br>&nbsp;&nbsp;
+              return this; <br>
+             }; <br> <br>
+
+            // Let's create three browser windows <br>
+            var workWindow = new Window(['GMail', 'Inbox', 'Work mail', 'Docs', 'freeCodeCamp']); // Your mailbox, drive, and other work sites <br>
+            var socialWindow = new Window(['FB', 'Gitter', 'Reddit', 'Twitter', 'Medium']); // Social sites <br>
+            var videoWindow = new Window(['Netflix', 'YouTube', 'Vimeo', 'Vine']); //  Entertainment sites <br> <br>
+
+            // Now perform the tab opening, closing, and other operations <br>
+            var finalTabs = socialWindow <br>&nbsp;&nbsp;
+                                .tabOpen() // Open a new tab for cat memes <br>&nbsp;&nbsp;
+                                .join(videoWindow.tabClose(2)) // Close third tab in video window, and join <br>&nbsp;&nbsp;
+                                .join(workWindow.tabClose(1).tabOpen()); <br> <br>
+
+            console.log(finalTabs.tabs);  //  FB,Gitter,Reddit,Twitter,Medium,new tab,Netflix,YouTube,Vine,GMail,Work mail,Docs,freeCodeCamp,new tab
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/understand-the-hazards-of-using-imperative-code" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Avoid-Mutations-and-Side-Effects-Using-Functional-Programming" class="main-section">
+        <header>Avoid Mutations and Side Effects Using Functional Programming</header>
+        <article>
+          <p class="wrappable">Fill in the code for the function <code>incrementer</code> so it returns the value of the global variable <code>fixedValue</code> increased by one.</p>
+          <blockquote>
+            // the global variable <br>
+            var fixedValue = 4; <br> <br>
+
+            function incrementer () { <br>&nbsp;
+              // Add your code below this line <br> <br>&nbsp;
+
+              return fixedValue + 1; <br> <br>&nbsp;
+
+              // Add your code above this line <br>
+            } <br> <br>
+
+            var newValue = incrementer(); // Should equal 5 <br>
+            console.log(fixedValue); // Should print 4
+          </blockquote>
+          <p><a href="" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Pass-Arguments-to-Avoid-External-Dependence-in-a-Function" class="main-section">
+        <header>Pass Arguments to Avoid External Dependence in a Function</header>
+        <article>
+          <p class="wrappable">Let's update the <code>incrementer</code> function to clearly declare its dependencies.</p>
+          <p class="wrappable">Write the <code>incrementer</code> function so it takes an argument, and then increases the value by one.</p>
+          <blockquote>
+            // the global variable <br>
+            var fixedValue = 4; <br> <br>
+
+            // Add your code below this line <br>
+            function incrementer (fiexedValue) { <br>&nbsp;&nbsp;
+              return fixedValue + 1; <br>&nbsp;&nbsp;
+              // Add your code above this line <br>
+            } <br> <br>
+
+            var newValue = incrementer(fixedValue); // Should equal 5 <br>
+            console.log(fixedValue); // Should print 4
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/pass-arguments-to-avoid-external-dependence-in-a-function" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Refactor-Global-Variables-Out-of-Functions" class="main-section">
+        <header>Refactor Global Variables Out of Functions</header>
+        <article>
+          <p class="wrappable">Refactor (rewrite) the code so the global array <code>bookList</code> is not changed inside either function. The <code>add</code> function should add the given <code>bookName</code> to the end of an array. The
+            <code>remove</code> function should remove the given <code>bookName</code> from an array. Both functions should return an array, and any new parameters should be added before the <code>bookName</code> one.</p>
+          <blockquote>
+            // the global variable <br>
+            var bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"]; <br> <br>
+
+            /* This function should add a book to the list and return the list */ <br>
+            // New parameters should come before the bookName one <br> <br>
+
+            // Add your code below this line <br>
+            function add (bookList, bookName) { <br>&nbsp;&nbsp;
+              let list = bookList.slice(0); <br>&nbsp;&nbsp;
+              // console.log(list); <br>&nbsp;&nbsp;
+              list.push(bookName) <br>&nbsp;&nbsp;
+              // console.log(list); <br>&nbsp;&nbsp;
+              return list; <br>&nbsp;&nbsp;
+              // Add your code above this line <br>
+            } <br> <br>
+
+            /* This function should remove a book from the list and return the list */ <br>
+            // New parameters should come before the bookName one <br> <br>
+
+            // Add your code below this line <br>
+            function remove (bookList, bookName) { <br>&nbsp;&nbsp;
+              let list = bookList.slice(0); <br>&nbsp;&nbsp;
+              let index = list.indexOf(bookName); <br>&nbsp;&nbsp;
+              // console.log(index); <br>&nbsp;&nbsp;
+              // console.log(list);  <br>&nbsp;&nbsp;
+              if (index >= 0) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                list.splice(index, 1); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                // console.log(list); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                return list;  <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                // Add your code above this line <br>&nbsp;&nbsp;
+              } <br>
+            } <br> <br>
+
+            var newBookList = add(bookList, 'A Brief History of Time'); <br>
+            var newerBookList = remove(bookList, 'On The Electrodynamics of Moving Bodies'); <br>
+            var newestBookList = remove(add(bookList, 'A Brief History of Time'), 'On The Electrodynamics of Moving Bodies'); <br> <br>
+
+            console.log(bookList);
+          </blockquote>
+          <blockquote>
+            function add (bookList, bookName) { <br>&nbsp;&nbsp;
+              let newArr = [...bookList]; <br>&nbsp;&nbsp;
+              newArr.push(bookName); <br>&nbsp;&nbsp;
+              return newArr; <br>
+            } <br> <br>
+
+            function remove (bookList, bookName) { <br>&nbsp;&nbsp;
+              let newArr = [...bookList]; <br>&nbsp;&nbsp;
+              if (newArr.indexOf(bookName) >= 0) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                newArr.splice(newArr.indexOf(bookName), 1); <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                return newArr; <br>&nbsp;&nbsp;
+              } <br>
+            }
+          </blockquote>
+          <blockquote>
+            function add (bookList, bookName) { <br>&nbsp;&nbsp;
+              return [...bookList, bookName]; <br>
+            } <br> <br>
+
+            function remove (bookList, bookName) { <br>&nbsp;&nbsp;
+                let newArr = [...bookList]; <br>&nbsp;&nbsp;
+                if(newArr.indexOf(bookName) >= 0) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                  return list.filter((item) => item != bookName); <br>&nbsp;&nbsp;
+                } <br>
+            }
+          </blockquote>
+          <p><a href="" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Use-the-map-Method-to-Extract-Data-from-an-Array" class="main-section">
+        <header>Use the map Method to Extract Data from an Array</header>
+        <article>
+          <p class="wrappable">The <code>watchList</code> array holds objects with information on several movies. Use <code>map</code> to pull the title and rating from <code>watchList</code> and save the new array in the <code>rating</code>
+            variable. The code in the editor currently uses a <code>for</code> loop to do this, replace the loop functionality with your <code>map</code> expression.</p>
+          <blockquote>
+            // the global variable <br>
+            var watchList = [ <br>
+                 {   <br>
+                   "Title": "Inception", <br>
+                   "Year": "2010", <br>
+                   "Rated": "PG-13", <br>
+                   "Released": "16 Jul 2010", <br>
+                   "Runtime": "148 min", <br>
+                   "Genre": "Action, Adventure, Crime", <br>
+                   "Director": "Christopher Nolan", <br>
+                   "Writer": "Christopher Nolan", <br>
+                   "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy", <br>
+                   "Plot": "A thief, who steals corporate secrets through use of dream-sharing technology, is given the inverse task of planting an idea into the mind of a CEO.", <br>
+                   "Language": "English, Japanese, French", <br>
+                   "Country": "USA, UK", <br>
+                   "Awards": "Won 4 Oscars. Another 143 wins & 198 nominations.", <br>
+                   "Poster": "http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg", <br>
+                   "Metascore": "74", <br>
+                   "imdbRating": "8.8", <br>
+                   "imdbVotes": "1,446,708", <br>
+                   "imdbID": "tt1375666", <br>
+                   "Type": "movie", <br>
+                   "Response": "True" <br>
+                }, <br>
+                {   <br>
+                   "Title": "Interstellar", <br>
+                   "Year": "2014", <br>
+                   "Rated": "PG-13", <br>
+                   "Released": "07 Nov 2014", <br>
+                   "Runtime": "169 min", <br>
+                   "Genre": "Adventure, Drama, Sci-Fi", <br>
+                   "Director": "Christopher Nolan", <br>
+                   "Writer": "Jonathan Nolan, Christopher Nolan", <br>
+                   "Actors": "Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow", <br>
+                   "Plot": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.", <br>
+                   "Language": "English", <br>
+                   "Country": "USA, UK", <br>
+                   "Awards": "Won 1 Oscar. Another 39 wins & 132 nominations.", <br>
+                   "Poster": "http://ia.media-imdb.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg", <br>
+                   "Metascore": "74", <br>
+                   "imdbRating": "8.6", <br>
+                   "imdbVotes": "910,366", <br>
+                   "imdbID": "tt0816692", <br>
+                   "Type": "movie", <br>
+                   "Response": "True" <br>
+                }, <br>
+                { <br>
+                   "Title": "The Dark Knight", <br>
+                   "Year": "2008", <br>
+                   "Rated": "PG-13", <br>
+                   "Released": "18 Jul 2008", <br>
+                   "Runtime": "152 min", <br>
+                   "Genre": "Action, Adventure, Crime", <br>
+                   "Director": "Christopher Nolan", <br>
+                   "Writer": "Jonathan Nolan (screenplay), Christopher Nolan (screenplay), Christopher Nolan (story), David S. Goyer (story), Bob Kane (characters)", <br>
+                   "Actors": "Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine", <br>
+                   "Plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.", <br>
+                   "Language": "English, Mandarin", <br>
+                   "Country": "USA, UK", <br>
+                   "Awards": "Won 2 Oscars. Another 146 wins & 142 nominations.", <br>
+                   "Poster": "http://ia.media-imdb.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg", <br>
+                   "Metascore": "82", <br>
+                   "imdbRating": "9.0", <br>
+                   "imdbVotes": "1,652,832", <br>
+                   "imdbID": "tt0468569", <br>
+                   "Type": "movie", <br>
+                   "Response": "True" <br>
+                }, <br>
+                {   <br>
+                   "Title": "Batman Begins", <br>
+                   "Year": "2005", <br>
+                   "Rated": "PG-13", <br>
+                   "Released": "15 Jun 2005", <br>
+                   "Runtime": "140 min", <br>
+                   "Genre": "Action, Adventure", <br>
+                   "Director": "Christopher Nolan", <br>
+                   "Writer": "Bob Kane (characters), David S. Goyer (story), Christopher Nolan (screenplay), David S. Goyer (screenplay)", <br>
+                   "Actors": "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes", <br>
+                   "Plot": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from the corruption that Scarecrow and the League of Shadows have cast upon it.", <br>
+                   "Language": "English, Urdu, Mandarin", <br>
+                   "Country": "USA, UK", <br>
+                   "Awards": "Nominated for 1 Oscar. Another 15 wins & 66 nominations.", <br>
+                   "Poster": "http://ia.media-imdb.com/images/M/MV5BNTM3OTc0MzM2OV5BMl5BanBnXkFtZTYwNzUwMTI3._V1_SX300.jpg", <br>
+                   "Metascore": "70", <br>
+                   "imdbRating": "8.3", <br>
+                   "imdbVotes": "972,584", <br>
+                   "imdbID": "tt0372784", <br>
+                   "Type": "movie", <br>
+                   "Response": "True" <br>
+                }, <br>
+                { <br>
+                   "Title": "Avatar", <br>
+                   "Year": "2009", <br>
+                   "Rated": "PG-13", <br>
+                   "Released": "18 Dec 2009", <br>
+                   "Runtime": "162 min", <br>
+                   "Genre": "Action, Adventure, Fantasy", <br>
+                   "Director": "James Cameron", <br>
+                   "Writer": "James Cameron", <br>
+                   "Actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang", <br>
+                   "Plot": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.", <br>
+                   "Language": "English, Spanish", <br>
+                   "Country": "USA, UK", <br>
+                   "Awards": "Won 3 Oscars. Another 80 wins & 121 nominations.", <br>
+                   "Poster": "http://ia.media-imdb.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_SX300.jpg", <br>
+                   "Metascore": "83", <br>
+                   "imdbRating": "7.9", <br>
+                   "imdbVotes": "876,575", <br>
+                   "imdbID": "tt0499549", <br>
+                   "Type": "movie", <br>
+                   "Response": "True" <br>
+                } <br>
+            ]; <br> <br>
+
+            // Add your code below this line <br> <br>
+
+            var rating = []; <br>
+            // for(var i=0; i < watchList.length; i++){ <br>
+            //   rating.push({title: watchList[i]["Title"],  rating: watchList[i]["imdbRating"]});  <br>
+            // } <br>
+            watchList.map((item) => { <br>
+              // console.log(item["Title"]); <br>
+              // console.log(item["imdbRating"]); <br>
+              rating.push({ <br>
+                title: item["Title"], <br>
+                rating: item["imdbRating"] <br>
+              }) <br>
+            }); <br>
+
+            // Add your code above this line <br> <br>
+
+            console.log(rating);
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/use-the-map-method-to-extract-data-from-an-array" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Implement-map-on-a-Prototype" class="main-section">
+        <header>Implement map on a Prototype</header>
+        <article>
+          <p class="wrappable">Write your own <code>Array.prototype.myMap()</code>, which should behave exactly like <code>Array.prototype.map()</code>. You may use a <code>for</code> loop or the <code>forEach</code> method.</p>
+          <blockquote>
+            // the global Array <br>
+            var s = [23, 65, 98, 5]; <br> <br>
+
+            Array.prototype.myMap = function(callback){ <br>&nbsp;&nbsp;
+              var newArray = []; <br>&nbsp;&nbsp;
+              // Add your code below this line <br>&nbsp;&nbsp;
+              this.forEach(function(element) { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                newArray.push(callback(element)); <br>&nbsp;&nbsp;
+              }); <br>&nbsp;&nbsp;
+              // Add your code above this line <br>&nbsp;&nbsp;
+              return newArray; <br>
+            }; <br> <br>
+
+            var new_s = s.myMap(function(item){ <br>&nbsp;&nbsp;
+              return item * 2; <br>
+            }); <br> <br>
+
+            console.log(new_s);
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/implement-map-on-a-prototype" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Use-the-filter-Method-to-Extract-Data-from-an-Array" class="main-section">
+        <header>Use the filter Method to Extract Data from an Array</header>
+        <article>
+          <p class="wrappable">The variable <code>watchList</code> holds an array of objects with information on several movies. Use a combination of <code>filter</code> and <code>map</code> to return a new array of objects with only
+            <code>title</code> and <code>rating</code> keys, but where <code>imdbRating</code> is greater than or equal to 8.0. Note that the rating values are saved as strings in the object and you may want to convert them into numbers to perform
+            mathematical operations on them.</p>
+            <blockquote>
+              // Add your code below this line <br>
+              var filteredList = []; <br> <br>
+
+              watchList.map((item, index, arr) => { <br>&nbsp;&nbsp;
+                // console.log(item); <br>&nbsp;&nbsp;
+                filteredList.push({ <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                  title: item["Title"], <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                  rating: item["imdbRating"] <br>&nbsp;&nbsp;
+                }); <br>
+              }); <br>
+
+              filteredList = filteredList.filter((item) => { <br>&nbsp;&nbsp;
+                return parseFloat(item["rating"]) > 8.0;  <br>
+              }) <br>
+              // Add your code above this line <br>
+
+              console.log(filteredList);
+            </blockquote>
+            <blockquote>
+              var filteredList = watchList.map((i) => {
+                return { title: i["Title"], rating: parseFloat(i["imdbRating"]) }
+              }).filter((i) => i["rating"] > 8.0);
+
+              console.log(filteredList);
+            </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/use-the-filter-method-to-extract-data-from-an-array" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Implement-the-filter-Method-on-a-Prototype" class="main-section">
+        <header>Implement the filter Method on a Prototype</header>
+        <article>
+          <p class="wrappable">Write your own <code>Array.prototype.myFilter()</code>, which should behave exactly like <code>Array.prototype.filter()</code>. You may use a <code>for</code> loop or the <code>Array.prototype.forEach()</code> method.</p>
+          <blockquote>
+            // the global Array <br>
+            var s = [23, 65, 98, 5]; <br> <br>
+
+            Array.prototype.myFilter = function(callback){ <br>&nbsp;&nbsp;
+              var newArray = []; <br>&nbsp;&nbsp;
+              // Add your code below this line <br>&nbsp;&nbsp;
+              this.forEach((item) => { <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                if (callback(item)) { <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  newArray.push(item) <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                } <br>&nbsp;&nbsp;
+              }); <br>&nbsp;&nbsp;
+              // Add your code above this line <br>&nbsp;&nbsp;
+              return newArray; <br>
+            }; <br> <br>
+
+            var new_s = s.myFilter(function(item){ <br>&nbsp;&nbsp;
+              return item % 2 === 1; <br>
+            });
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/implement-the-filter-method-on-a-prototype" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Return-Part-of-an-Array-Using-the-slice-Method" class="main-section">
+        <header>Return Part of an Array Using the slice Method</header>
+        <article>
+          <p class="wrappable">Use the <code>slice</code> method in the <code>sliceArray</code> function to return part of the <code>anim</code> array given the provided <code>beginSlice</code> and <code>endSlice</code> indices. The function should return an array.</p>
+          <blockquote>
+            function sliceArray(anim, beginSlice, endSlice) { <br>&nbsp;&nbsp;
+              // Add your code below this line <br> <br>&nbsp;&nbsp;
+
+              return anim.slice(beginSlice, endSlice); <br> <br>&nbsp;&nbsp;
+
+              // Add your code above this line <br>
+            } <br>
+            var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"]; <br>
+            sliceArray(inputAnim, 1, 3);
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/return-part-of-an-array-using-the-slice-method" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Remove-Elements-from-an-Array-Using-slice-Instead-of-splice" class="main-section">
+        <header>Remove Elements from an Array Using slice Instead of splice</header>
+        <article>
+          <p class="wrappable">Rewrite the function <code>nonMutatingSplice</code> by using <code>slice</code> instead of <code>splice</code>. It should limit the provided <code>cities</code> array to a length of 3, and return a new array with only
+            the first three items.</p>
+          <p class="wrappable">Do not mutate the original array provided to the function.</p>
+          <blockquote>
+            function nonMutatingSplice(cities) { <br>&nbsp;&nbsp;
+              // Add your code below this line <br>&nbsp;&nbsp;
+              return cities.slice(0, 3); <br> <br>&nbsp;&nbsp;
+
+              // Add your code above this line <br>
+            } <br>
+            var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"]; <br>
+            console.log(nonMutatingSplice(inputCities));
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/remove-elements-from-an-array-using-slice-instead-of-splice" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Combine-Two-Arrays-Using-the-concat-Method" class="main-section">
+        <header>Combine Two Arrays Using the concat Method</header>
+        <article>
+          <p class="wrappable">Use the <code>concat</code> method in the <code>nonMutatingConcat</code> function to concatenate <code>attach</code> to the end of <code>original</code>. The function should return the concatenated array.</p>
+          <blockquote>
+            function nonMutatingConcat(original, attach) { <br>&nbsp;&nbsp;
+              // Add your code below this line <br> <br>&nbsp;&nbsp;
+
+              return original.concat(attach); <br> <br>&nbsp;&nbsp;
+
+              // Add your code above this line <br>
+            } <br>
+            var first = [1, 2, 3]; <br>
+            var second = [4, 5]; <br>
+            nonMutatingConcat(first, second);
+          </blockquote>
+          <p><a href="" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Add-Elements-to-the-End-of-an-Array-Using-concat-Instead-of-push" class="main-section">
+        <header>Add Elements to the End of an Array Using concat Instead of push</header>
+        <article>
+          <p class="wrappable">Change the <code>nonMutatingPush</code> function so it uses <code>concat</code> to add <code>newItem</code> to the end of <code>original</code> instead of <code>push</code>. The function should return an array.</p>
+          <blockquote>
+            function nonMutatingPush(original, newItem) { <br>&nbsp;&nbsp;
+              // Add your code below this line <br>&nbsp;&nbsp;
+              return original.concat(newItem); <br>&nbsp;&nbsp;
+              // Add your code above this line <br>
+            } <br>
+            var first = [1, 2, 3]; <br>
+            var second = [4, 5]; <br>
+            nonMutatingPush(first, second);
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/add-elements-to-the-end-of-an-array-using-concat-instead-of-push" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Use-the-reduce-Method-to-Analyze-Data" class="main-section">
+        <header>Use the reduce Method to Analyze Data</header>
+        <article>
+          <p class="wrappable">The variable <code>watchList</code> holds an array of objects with information on several movies. Use <code>reduce</code> to find the average IMDB rating of the movies <strong>directed by Christopher Nolan</strong>.
+            Recall from prior challenges how to <code>filter</code> data and <code>map</code> over it to pull what you need. You may need to create other variables, but save the final average into the variable <code>averageRating</code>. Note that
+            the rating values are saved as strings in the object and need to be converted into numbers before they are used in any mathematical operations.</p>
+          <blockquote>
+            // Add your code below this line <br>
+            var averageRating = watchList <br>
+              .filter((i) => { <br>
+                return i["Director"] == "Christopher Nolan"; <br>
+              }) <br>
+              .map((i) => parseFloat(i["imdbRating"])) <br>
+              .reduce((acc, cv) => acc + cv; ) / watchList <br>
+              .filter((i) => return i["Director"] == "Christopher Nolan").length; <br> <br>
+            // Add your code above this line <br> <br>
+
+            console.log(averageRating);
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/use-the-reduce-method-to-analyze-data" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Sort-an-Array-Alphabetically-using-the-sort-Method" class="main-section">
+        <header>Sort an Array Alphabetically using the sort Method</header>
+        <article>
+          <p class="wrappable">Use the <code>sort</code> method in the <code>alphabeticalOrder</code> function to sort the elements of <code>arr</code> in alphabetical order.</p>
+          <blockquote>
+            function alphabeticalOrder(arr) { <br>&nbsp;&nbsp;
+              // Add your code below this line <br>&nbsp;&nbsp;
+              return arr.sort(); <br>&nbsp;&nbsp;
+              // Add your code above this line <br>
+            } <br>
+            alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/sort-an-array-alphabetically-using-the-sort-method" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Return-a-Sorted-Array-Without-Changing-the-Original-Array" class="main-section">
+        <header>Return a Sorted Array Without Changing the Original Array</header>
+        <article>
+          <p class="wrappable">Use the <code>sort</code> method in the <code>nonMutatingSort</code> function to sort the elements of an array in ascending order. The function should return a new array, and not mutate the <code>globalArray</code> variable.</p>
+          <blockquote>
+            var globalArray = [5, 6, 3, 2, 9]; <br>
+            function nonMutatingSort(arr) { <br>&nbsp;&nbsp;
+              // Add your code below this line <br>&nbsp;&nbsp;
+              return [].concat(arr).sort((a, b) => a - b); <br>&nbsp;&nbsp;
+              // Add your code above this line <br>
+            } <br>
+            nonMutatingSort(globalArray);
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/return-a-sorted-array-without-changing-the-original-array/" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Split-a-String-into-an-Array-Using-the-split-Method" class="main-section">
+        <header>Split a String into an Array Using the split Method</header>
+        <article>
+          <p class="wrappable">Use the <code>split</code> method inside the <code>splitify</code> function to split <code>str</code> into an array of words. The function should return the array. Note that the words are not always separated by
+            spaces, and the array should not contain punctuation.</p>
+          <blockquote>
+            function splitify(str) { return str.split(/\W/); } <br>
+            splitify("Hello World,I-am code");
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/split-a-string-into-an-array-using-the-split-method" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Combine-an-Array-into-a-String-Using-the-join-Method" class="main-section">
+        <header>Combine an Array into a String Using the join Method</header>
+        <article>
+          <p class="wrappable">Use the <code>join</code> method (among others) inside the <code>sentensify</code> function to make a sentence from the words in the string <code>str</code>. The function should return a string. For example, "I-like-Star-Wars" would be converted to "I like Star Wars". For this challenge, do not use the <code>replace</code> method.</p>
+          <blockquote>
+            function sentensify(str) { return str.split(/\W/).join(' '); } <br>
+            sentensify("May-the-force-be-with-you");
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/combine-an-array-into-a-string-using-the-join-method" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Apply-Functional-Programming-to-Convert-Strings-to-URL-Slugs" class="main-section">
+        <header>Apply Functional Programming to Convert Strings to URL Slugs</header>
+        <article>
+          <div class="challenge-instructions functional-programming col-xs-12">
+            <p class="wrappable">Fill in the <code>urlSlug</code> function so it converts a string <code>title</code> and returns the hyphenated version for the URL. You can use any of the methods covered in this section, and don't use
+              <code>replace</code>. Here are the requirements:</p>
+            <p class="wrappable">The input is a string with spaces and title-cased words</p>
+            <p class="wrappable">The output is a string with the spaces between words replaced by a hyphen (<code>-</code>)</p>
+            <p class="wrappable">The output should be all lower-cased letters</p>
+            <p class="wrappable">The output should not have any spaces</p>
+          </div>
+          <blockquote>
+            // the global variable <br>
+            var globalTitle = "Winter Is Coming"; <br> <br>
+
+            function urlSlug(title) { <br>&nbsp;&nbsp;
+              // console.log(title.toLowerCase().split(/\W/).filter((i) => i != '').join('-')); <br>&nbsp;&nbsp;
+              return title.toLowerCase().split(/\W/).filter((i) => i != '').join('-'); <br>
+            } <br> <br>
+
+            var winterComing = urlSlug(globalTitle); // Should be "winter-is-coming" <br> <br>
+
+            var winterComis = urlSlug(' Winter Is   Coming'); // Should be "winter-is-coming"
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/apply-functional-programming-to-convert-strings-to-url-slugs" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Use-the-every-Method-to-Check-that-Every-Element-in-an-Array-Meets-a-Criteria" class="main-section">
+        <header>Use the every Method to Check that Every Element in an Array Meets a Criteria</header>
+        <article>
+          <p class="wrappable">Use the <code>every</code> method inside the <code>checkPositive</code> function to check if every element in <code>arr</code> is positive. The function should return a Boolean value.</p>
+          <blockquote>
+            function checkPositive(arr) { <br>&nbsp;&nbsp;
+              // Add your code below this line <br>&nbsp;&nbsp;
+              return arr.every((n)=> n > 0 ); <br>&nbsp;&nbsp;
+              // Add your code above this line <br>
+            } <br>
+            checkPositive([1, 2, 3, -4, 5]);
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/use-the-every-method-to-check-that-every-element-in-an-array-meets-a-criteria/" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Use-the-some-Method-to-Check-that-Any-Elements-in-an-Array-Meet-a-Criteria" class="main-section">
+        <header>Use the some Method to Check that Any Elements in an Array Meet a Criteria</header>
+        <article>
+          <p class="wrappable">Use the <code>some</code> method inside the <code>checkPositive</code> function to check if any element in <code>arr</code> is positive. The function should return a Boolean value.</p>
+          <blockquote>
+            function checkPositive(arr) { <br>&nbsp;&nbsp;
+              return arr.some((i) => i > 0); <br>
+            } <br>
+            checkPositive([1, 2, 3, -4, 5]);
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/use-the-some-method-to-check-that-any-elements-in-an-array-meet-a-criteria" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Introduction-to-Currying-and-Partial-Application" class="main-section">
+        <header>Introduction to Currying and Partial Application</header>
+        <article>
+          <p class="wrappable">Fill in the body of the <code>add</code> function so it uses currying to add parameters <code>x</code>, <code>y</code>, and <code>z</code>.</p>
+          <blockquote>
+            function add(x) { <br> &nbsp;&nbsp;
+              return function (y) { <br> &nbsp;&nbsp;&nbsp;&nbsp;
+                return function (z) { <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  return x + y + z; <br> &nbsp;&nbsp;&nbsp;&nbsp;
+                } <br> &nbsp;&nbsp;
+              } <br>
+            } <br>
+            add(10)(20)(30);
+          </blockquote>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/functional-programming/introduction-to-currying-and-partial-application" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+
+    </main>
+    <script type="text/javascript" src="../js/scripts.js"></script>
+  </body>
+</html>

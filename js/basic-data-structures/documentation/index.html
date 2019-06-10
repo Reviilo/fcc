@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/stylesheet.css">
+  </head>
+  <body>
+
+    <nav id="navbar">
+      <header>
+        Documentation
+      </header>
+      <ul id="nav-list" class="nav-list">
+        <li class="container-nav-li"><a class="nav-link" href="#Introdution" rel="internal">Introdution</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Add-Items-to-an-Array-with-push-and-unshift" rel="internal">Add Items to an Array with push() and unshift()</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Remove-Items-from-an-Array-with-pop-and-shift" rel="internal">Remove Items from an Array with pop() and shift()</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Remove-Items-Using-splice" rel="internal">Remove Items Using splice()</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Add-Items-Using-splice" rel="internal">Add Items Using splice()</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Copy-Array-Items-Using-slice" rel="internal">Copy Array Items Using slice()</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Check-For-The-Presence-of-an-Element-With-indexOf" rel="internal">Check For The Presence of an Element With indexOf()</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Iterate-Through-All-an-Array's-Items-Using-For-Loops" rel="internal">Iterate Through All an Array's Items Using For Loops</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Add-Key-Value-Pairs-to-JavaScript-Objects" rel="internal">Add Key-Value Pairs to JavaScript Objects</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Use-the-delete-Keyword-to-Remove-Object-Properties" rel="internal">Use the delete Keyword to Remove Object Properties</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Check-if-an-Object-has-a-Property" rel="internal">Check if an Object has a Property</a></li>
+        <li class="container-nav-li"><a class="nav-link" href="#Iterate-Through-the-Keys-of-an-Object-with-a-for-in-Statement" rel="internal">Iterate Through the Keys of an Object with a for...in Statement</a></li>
+      </ul>
+      <div class="nav-mobile"> Menu </div>
+    </nav>
+
+    <main id="main-doc">
+      <!--
+        <p><a href="" target="_blank">reference fcc, click here.</a></p>
+      -->
+
+      <section id="Introdution" class="main-section">
+        <header>Introduction to the Basic Data Structure Challenges</header>
+        <article>
+          <p>
+            Data can be stored and accessed in many different ways, both in Javascript and other languages.
+            This section will teach you how to manipulate arrays, as well as access and copy the information within them.
+            It will also teach you how to manipulate and access the data within Javascript objects, using both dot and bracket notation.
+            When you're done with this section, you should understand the basic properties and differences between arrays and objects,
+            as well as how to choose which to use for a given purpose.
+          </p>
+        </article>
+      </section>
+
+      <section id="Add-Items-to-an-Array-with-push-and-unshift" class="main-section">
+        <header>Add Items to an Array with push() and unshift()</header>
+        <article>
+          <div class="challenge-instructions basic-data-structures col-xs-12">
+            <p class="wrappable">An array's length, like the data types it can contain, is not fixed. Arrays can be defined with a length of any number of elements, and elements can be added or removed over time; in other words, arrays are <dfn>mutable</dfn>.
+              In this challenge, we will look at two methods with which we can programmatically modify an array: <code>Array.push()</code> and <code>Array.unshift()</code>. </p>
+            <p class="wrappable">Both methods take one or more elements as parameters and add those elements to the array the method is being called on; the <code>push()</code> method adds elements to the end of an array, and <code>unshift()</code> adds
+              elements to the beginning. Consider the following:</p>
+            <div>
+              <blockquote>let twentyThree = 'XXIII';<br>let romanNumerals = ['XXI', 'XXII'];<br><br>romanNumerals.unshift('XIX', 'XX');<br>// now equals ['XIX', 'XX', 'XXI', 'XXII']<br><br>romanNumerals.push(twentyThree);<br>// now equals ['XIX', 'XX', 'XXI',
+                'XXII', 'XXIII']</blockquote>
+            </div>
+            <p class="wrappable">Notice that we can also pass variables, which allows us even greater flexibility in dynamically modifying our array's data.</p>
+          </div>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/add-items-to-an-array-with-push-and-unshift" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Remove-Items-from-an-Array-with-pop-and-shift" class="main-section">
+        <header>Remove Items from an Array with pop() and shift()</header>
+        <article>
+          <div class="challenge-instructions basic-data-structures col-xs-12">
+            <p class="wrappable">Both <code>push()</code> and <code>unshift()</code> have corresponding methods that are nearly functional opposites: <code>pop()</code> and <code>shift()</code>. As you may have guessed by now, instead of adding,
+              <code>pop()</code> <em>removes</em> an element from the end of an array, while <code>shift()</code> removes an element from the beginning. The key difference between <code>pop()</code> and <code>shift()</code> and their cousins
+              <code>push()</code> and <code>unshift()</code>, is that neither method takes parameters, and each only allows an array to be modified by a single element at a time.</p>
+            <p class="wrappable">Let's take a look:</p>
+            <div>
+              <blockquote>let greetings = ['whats up?', 'hello', 'see ya!'];<br><br>greetings.pop();<br>// now equals ['whats up?', 'hello']<br><br>greetings.shift();<br>// now equals ['hello']</blockquote>
+            </div>
+            <p class="wrappable">We can also return the value of the removed element with either method like this:</p>
+            <div>
+              <blockquote>let popped = greetings.pop();<br>// returns 'hello'<br>// greetings now equals []</blockquote>
+            </div>
+            <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/remove-items-from-an-array-with-pop-and-shift" target="_blank">reference fcc, click here.</a></p>
+          </div>
+        </article>
+      </section>
+
+      <section id="Remove-Items-Using-splice" class="main-section">
+        <header>Remove Items Using splice()</header>
+        <article>
+          <div class="challenge-instructions basic-data-structures col-xs-12">
+            <p class="wrappable">Ok, so we've learned how to remove elements from the beginning and end of arrays using <code>shift()</code> and <code>pop()</code>, but what if we want to remove an element from somewhere in the middle? Or remove more than one
+              element at once? Well, that's where <code>splice()</code> comes in. <code>splice()</code> allows us to do just that: <strong>remove any number of consecutive elements</strong> from anywhere in an array.</p>
+            <p class="wrappable"><code>splice()</code> can take up to 3 parameters, but for now, we'll focus on just the first 2. The first two parameters of <code>splice()</code> are integers which represent indexes, or positions, of the array that
+              <code>splice()</code> is being called upon. And remember, arrays are <em>zero-indexed</em>, so to indicate the first element of an array, we would use <code>0</code>. <code>splice()</code>'s first parameter represents the index on the array from
+              which to begin removing elements, while the second parameter indicates the number of elements to delete. For example:</p>
+            <div>
+              <blockquote>let array = ['today', 'was', 'not', 'so', 'great'];<br><br>array.splice(2, 2);<br>// remove 2 elements beginning with the 3rd element<br>// array now equals ['today', 'was', 'great']</blockquote>
+            </div>
+            <p class="wrappable"><code>splice()</code> not only modifies the array it's being called on, but it also returns a new array containing the value of the removed elements:</p>
+            <div>
+              <blockquote>let array = ['I', 'am', 'feeling', 'really', 'happy'];<br><br>let newArray = array.splice(3, 2);<br>// newArray equals ['really', 'happy']</blockquote>
+            </div>
+            <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/remove-items-using-splice" target="_blank">reference fcc, click here.</a></p>
+          </div>
+        </article>
+      </section>
+
+      <section id="Add-Items-Using-splice" class="main-section">
+        <header>Add Items Using splice()</header>
+        <article>
+          <div class="challenge-instructions basic-data-structures col-xs-12">
+            <p class="wrappable">Remember in the last challenge we mentioned that <code>splice()</code> can take up to three parameters? Well, we can go one step further with <code>splice()</code> — in addition to removing elements, we can use that third
+              parameter, which represents one or more elements, to <em>add</em> them as well. This can be incredibly useful for quickly switching out an element, or a set of elements, for another. For instance, let's say you're storing a color scheme for a set
+              of DOM elements in an array, and want to dynamically change a color based on some action:</p>
+            <div>
+              <blockquote>function colorChange(arr, index, newColor) {<br>&nbsp;&nbsp;arr.splice(index, 1, newColor);<br>&nbsp;&nbsp;return arr;<br>}<br><br>let colorScheme = ['#878787', '#a08794', '#bb7e8c', '#c9b6be', '#d1becf'];<br><br>colorScheme =
+                colorChange(colorScheme, 2, '#332327');<br>// we have removed '#bb7e8c' and added '#332327' in its place<br>// colorScheme now equals ['#878787', '#a08794', '#332327', '#c9b6be', '#d1becf']</blockquote>
+            </div>
+            <p class="wrappable">This function takes an array of hex values, an index at which to remove an element, and the new color to replace the removed element with. The return value is an array containing a newly modified color scheme! While this
+              example is a bit oversimplified, we can see the value that utilizing <code>splice()</code> to its maximum potential can have.</p>
+            <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/add-items-using-splice" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Copy-Array-Items-Using-slice" class="main-section">
+        <header>Copy Array Items Using slice()</header>
+        <article>
+          <div class="challenge-instructions basic-data-structures col-xs-12">
+            <p class="wrappable">The next method we will cover is <code>slice()</code>. <code>slice()</code>, rather than modifying an array, copies, or <em>extracts</em>, a given number of elements to a new array, leaving the array it is called upon
+              untouched. <code>slice()</code> takes only 2 parameters — the first is the index at which to begin extraction, and the second is the index at which to stop extraction (extraction will occur up to, but not including the element at this index).
+              Consider this:</p>
+            <div>
+              <blockquote>let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear'];<br><br>let todaysWeather = weatherConditions.slice(1, 3);<br>// todaysWeather equals ['snow', 'sleet'];<br>// weatherConditions still equals ['rain', 'snow', 'sleet',
+                'hail', 'clear']<br></blockquote>
+            </div>
+            <p class="wrappable">In effect, we have created a new array by extracting elements from an existing array.</p>
+            <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/copy-array-items-using-slice" target="_blank">reference fcc, click here.</a></p>
+          </div>
+        </article>
+      </section>
+
+      <section id="Check-For-The-Presence-of-an-Element-With-indexOf" class="main-section">
+        <header>Check For The Presence of an Element With indexOf()</header>
+        <article>
+          <div class="challenge-instructions basic-data-structures col-xs-12">
+            <p class="wrappable">Since arrays can be changed, or <em>mutated</em>, at any time, there's no guarantee about where a particular piece of data will be on a given array, or if that element even still exists. Luckily, JavaScript provides us with
+              another built-in method, <code>indexOf()</code>, that allows us to quickly and easily check for the presence of an element on an array. <code>indexOf()</code> takes an element as a parameter, and when called, it returns the position, or index, of
+              that element, or <code>-1</code> if the element does not exist on the array.</p>
+            <p class="wrappable">For example:</p>
+            <div>
+              <blockquote>let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];<br><br>fruits.indexOf('dates') // returns -1<br>fruits.indexOf('oranges') // returns 2<br>fruits.indexOf('pears') // returns 1, the first index at which the element
+                exists</blockquote>
+            </div>
+            <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/check-for-the-presence-of-an-element-with-indexof" target="_blank">reference fcc, click here.</a></p>
+          </div>
+        </article>
+      </section>
+
+      <section id="Iterate-Through-All-an-Array's-Items-Using-For-Loops" class="main-section">
+        <header>Iterate Through All an Array's Items Using For Loops</header>
+        <article>
+          <div class="challenge-instructions basic-data-structures col-xs-12">
+            <p class="wrappable">Sometimes when working with arrays, it is very handy to be able to iterate through each item to find one or more elements that we might need, or to manipulate an array based on which data items meet a certain set of criteria.
+              JavaScript offers several built in methods that each iterate over arrays in slightly different ways to achieve different results (such as <code>every()</code>, <code>forEach()</code>, <code>map()</code>, etc.), however the technique which is most
+              flexible and offers us the greatest amount of control is a simple <code>for</code> loop.</p>
+            <p class="wrappable">Consider the following:</p>
+            <div>
+              <blockquote>function greaterThanTen(arr) {<br>&nbsp;&nbsp;let newArr = [];<br>&nbsp;&nbsp;for (let i = 0; i &lt; arr.length; i++) {<br>&nbsp;&nbsp;&nbsp;&nbsp;if (arr[i] &gt; 10)
+                {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newArr.push(arr[i]);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;}<br>&nbsp;&nbsp;return newArr;<br>}<br><br>greaterThanTen([2, 12, 8, 14, 80, 0, 1]);<br>// returns [12, 14, 80]</blockquote>
+            </div>
+            <p class="wrappable">Using a <code>for</code> loop, this function iterates through and accesses each element of the array, and subjects it to a simple test that we have created. In this way, we have easily and programmatically determined which data
+              items are greater than <code>10</code>, and returned a new array containing those items.</p>
+          </div>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/iterate-through-all-an-arrays-items-using-for-loops" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Add-Key-Value-Pairs-to-JavaScript-Objects" class="main-section">
+        <header>Add Key-Value Pairs to JavaScript Objects</header>
+        <article>
+          <div class="challenge-instructions basic-data-structures col-xs-12">
+            <p class="wrappable">At their most basic, objects are just collections of <dfn>key-value pairs</dfn>, or in other words, pieces of data mapped to unique identifiers that we call <dfn>properties</dfn> or <dfn>keys</dfn>. Let's take a look at a very
+              simple example:</p>
+            <div>
+              <blockquote>let FCC_User = {<br>&nbsp;&nbsp;username: 'awesome_coder',<br>&nbsp;&nbsp;followers: 572,<br>&nbsp;&nbsp;points: 1741,<br>&nbsp;&nbsp;completedProjects: 15<br>};</blockquote>
+            </div>
+            <p class="wrappable">The above code defines an object called <code>FCC_User</code> that has four <dfn>properties</dfn>, each of which map to a specific value. If we wanted to know the number of <code>followers</code> <code>FCC_User</code> has, we
+              can access that property by writing:</p>
+            <div>
+              <blockquote>let userData = FCC_User.followers;<br>// userData equals 572</blockquote>
+            </div>
+            <p class="wrappable">This is called <dfn>dot notation</dfn>. Alternatively, we can also access the property with brackets, like so:</p>
+            <div>
+              <blockquote>let userData = FCC_User['followers']<br>// userData equals 572</blockquote>
+            </div>
+            <p class="wrappable">Notice that with <dfn>bracket notation</dfn>, we enclosed <code>followers</code> in quotes. This is because the brackets actually allow us to pass a variable in to be evaluated as a property name (hint: keep this in mind for
+              later!). Had we passed <code>followers</code> in without the quotes, the JavaScript engine would have attempted to evaluate it as a variable, and a <code>ReferenceError: followers is not defined</code> would have been thrown.</p>
+          </div>
+          <p><a href="file:///Users/oramirez/Documents/proyectos/revi/fcc/js/basic-data-structures/documentation/index.html#Add-Key-Value-Pairs-to-JavaScript-Objects" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Use-the-delete-Keyword-to-Remove-Object-Properties" class="main-section">
+        <header>Use the delete Keyword to Remove Object Properties</header>
+        <article>
+          <p class="wrappable">Let's revisit our <code>foods</code> object example one last time. If we wanted to remove the <code>apples</code> key, we can remove it by using the <code>delete</code> keyword like this:</p>
+          <div><blockquote>delete foods.apples;</blockquote></div>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/use-the-delete-keyword-to-remove-object-properties" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Check-if-an-Object-has-a-Property" class="main-section">
+        <header>Check if an Object has a Property</header>
+        <article>
+          <p class="wrappable">Now we can add, modify, and remove keys from objects. But what if we just wanted to know if an object has a specific property? JavaScript provides us with two different ways to do this. One uses the <code>hasOwnProperty()</code> method and the other uses the <code>in</code> keyword. If we have an object <code>users</code> with a property of <code>Alan</code>, we could check for its presence in either of the following ways:</p>
+          <div><blockquote>users.hasOwnProperty('Alan');<br>'Alan' in users;<br>// both return true</blockquote></div>
+          <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/check-if-an-object-has-a-property" target="_blank">reference fcc, click here.</a></p>
+        </article>
+      </section>
+
+      <section id="Iterate-Through-the-Keys-of-an-Object-with-a-for-in-Statement" class="main-section">
+        <header>Iterate Through the Keys of an Object with a for...in Statement</header>
+        <article>
+          <div class="challenge-instructions basic-data-structures col-xs-12">
+            <p class="wrappable">Sometimes you may need to iterate through all the keys within an object. This requires a specific syntax in JavaScript called a <dfn>for...in</dfn> statement. For our <code>users</code> object, this could look like:</p>
+            <div>
+              <blockquote>for (let user in users) {<br>&nbsp;&nbsp;console.log(user);<br>};<br><br>// logs:<br>Alan<br>Jeff<br>Sarah<br>Ryan</blockquote>
+            </div>
+            <p class="wrappable">In this statement, we defined a variable <code>user</code>, and as you can see, this variable was reset during each iteration to each of the object's keys as the statement looped through the object, resulting in each user's
+              name being printed to the console.</p>
+            <p class="wrappable"><strong>NOTE:</strong><br>Objects do not maintain an ordering to stored keys like arrays do; thus a keys position on an object, or the relative order in which it appears, is irrelevant when referencing or accessing that key.
+            </p>
+            <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/-iterate-through-the-keys-of-an-object-with-a-for---in-statement" target="_blank">reference fcc, click here.</a></p>
+          </div>
+        </article>
+      </section>
+
+      <section id="Generate-an-Array-of-All-Object-Keys-with-Object-keys" class="main-section">
+        <header>Generate an Array of All Object Keys with Object.keys()</header>
+        <article>
+          <div class="challenge-instructions basic-data-structures col-xs-12">
+            <p class="wrappable">We can also generate an array which contains all the keys stored in an object using the <code>Object.keys()</code> method and passing in an object as the argument. This will return an array with strings representing each
+              property in the object. Again, there will be no specific order to the entries in the array.</p>
+            <p class="wrappable">
+              <hr>
+            </p>
+            <p class="wrappable">Finish writing the <code>getArrayOfUsers</code> function so that it returns an array containing all the properties in the object it receives as an argument.</p>
+            <blockquote>
+              let users = { <br>&nbsp;&nbsp;
+                Alan: { age: 27, online: false }, <br>&nbsp;&nbsp;
+                Jeff: { age: 32, online: true }, <br>&nbsp;&nbsp;
+                Sarah: { age: 48, online: false }, <br>&nbsp;&nbsp;
+                Ryan: { age: 19, online: true } <br>
+              }; <br><br>
+
+              function getArrayOfUsers(obj) { <br>&nbsp;&nbsp;
+                // change code below this line <br>&nbsp;&nbsp;
+                return Object.keys(obj); <br>&nbsp;&nbsp;
+                // change code above this line <br>
+              } <br><br>
+
+              console.log(getArrayOfUsers(users)); // (4) ["Alan", "Jeff", "Sarah", "Ryan"]
+            </blockquote>
+            <p><a href="https://learn.freecodecamp.org/javascript-algorithms-and-data-structures/basic-data-structures/generate-an-array-of-all-object-keys-with-object-keys" target="_blank">reference fcc, click here.</a></p>
+          </div>
+        </article>
+      </section>
+
+    </main>
+    <script type="text/javascript" src="../js/scripts.js"></script>
+
+  </body>
+</html>
